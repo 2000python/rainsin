@@ -125,8 +125,8 @@ class LatestInfo extends React.Component{
                      
                     </a>
                     </Link>
-                  <span className='li-cot-time'>{this.state.time}</span>
-                  <span className='li-cot-item'>{ this.state.item}</span>
+                  <span className='li-cot-time'>2021.10.30</span>
+                  <span className='li-cot-item'>羽毛球技术要点（个人观点）</span>
                   <span className='li-cot-tag'>{ this.state.tag}</span>
                   
                 </div>
