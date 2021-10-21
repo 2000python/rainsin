@@ -1,0 +1,39 @@
+@keyframes loadhide {
+    from {height: 100vh;} to {height: 0vh;}
+}
+
+.loading {
+    position: fixed;
+    z-index: 9;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #fff;
+    /* */
+}
+.load-box{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 35rem;
+
+}
+
+#load-img{
+    margin-top: 1rem !important;
+}
+
+.load-box>hr {
+    background:#fff;
+    height: 0;
+    border: 0;
+}
+.loading-animation {
+    position: fixed;
+    width: 100vw;
+    z-index: 9;
+    animation: 1s loadhide; 
+    background-color: #fff;
+}

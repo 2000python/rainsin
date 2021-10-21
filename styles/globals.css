@@ -1,0 +1,75 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    /* 火狐浏览器取消滚动条 */
+  scrollbar-width: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+span {
+  margin: 0;
+  padding: 0;
+}
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  box-sizing: border-box;
+  --nav-height:7.7rem;
+  --nav-vary-height:11rem;
+  --art-bg-color:rgb(253, 248, 237);
+}
+body{
+  position: relative;
+  overflow-x: hidden;
+  
+}
+/* 取消滚动条 */
+body::-webkit-scrollbar{
+  display: none;
+}
+.scroll-progress-bar{
+  position: fixed;
+  z-index: 109;
+  top: 0;
+  height: 3px;
+  background-color: rgb(28, 238, 9);
+}
+@font-face {
+  font-family: 'Cinzel';
+  src: url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/font/Cinzel-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Raleway-Light';
+  src: url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/font/Raleway-Light.ttf);
+}
+
+@font-face {
+  font-family: '思源宋体';
+  src: url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/font/NotoSerifSC-Light.otf);
+}
+@font-face {
+  font-family: 'MontserratAlternates';
+  src: url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/font/MontserratAlternates-Light.ttf);
+}
+@font-face{
+  font-family: 'Garamond Premier Pro Display';
+  src:url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/font/Garamond%20Premier%20Pro%20Display.otf)
+}
+@font-face {
+  font-family: 'zhaomf';
+  src: url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/font/ZMF.TTF);
+}
+@font-face {
+  font-family: '方正小篆';
+  src: url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/font/FZXZTF.OTF);
+}

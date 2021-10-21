@@ -1,0 +1,15 @@
+.markdownFlexBox{
+    position: relative;
+    display: flex;
+    z-index: 2;
+    width: 80vw;
+    top: 7rem;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.markdownBox{
+    flex: 4;
+}
+.mark-art-navbar{
+    flex: 1;
+}

@@ -1,0 +1,40 @@
+.art{
+    position: relative;
+    width: 100vw;
+}
+.restrain{
+    width: 85vw;
+    margin: 0 auto;
+}
+.art-box{
+    position: fixed;
+    height: 6rem;
+    left: 50%;
+    transform: translate(-50%,0);
+    border-bottom: 1px solid #000;
+}
+.art-box>ul{
+    height: 6rem;
+    justify-content: right;
+}
+.ant-menu-submenu-title{
+    height: 6rem;
+}
+.ant-menu-submenu-title>span{
+    line-height: 6rem;
+}
+.art-nav-left-item{
+    position: absolute;
+    display: block;
+    top:50%;
+    transform: translate(0,-50%);
+    font-family: 'Cinzel';
+    font-size: 2em;
+    letter-spacing: .2em;
+    text-decoration: none;
+    color: #000;
+    transition: all .5;
+}
+.art-nav-left-item:hover{
+    color: #000;
+}

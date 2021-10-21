@@ -1,0 +1,636 @@
+/* ------------------------------- */
+
+/* 
+
+    1.Banner
+    2.Latest
+    3.Pages
+
+*/
+
+/* ---Banner--- */
+
+/* -Img- */
+
+.banner-img {
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+}
+
+.b-img-box {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width: 97vw;
+    height: 97vh;
+}
+
+/* -Text- */
+
+.banner-t-box{
+    position: relative;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+}
+
+.banner-text{
+    position: absolute;
+    z-index: 2;
+    top: 20%;
+    left: 5%;
+    text-align: left;
+}
+
+.banner-text span {
+    font-family: 'Garamond Premier Pro Display';
+    color: #fff;
+    font-size: 2.5em;
+    letter-spacing: .5em;
+    line-height: 2.5em;
+}
+.b-t-miss{
+    position: absolute;
+    left: 5%;
+    bottom: 5rem;
+    color:#fff;
+    font-family: '思源宋体';
+    font-size: .7rem;
+    line-height: 3em;
+}
+.b-t-design{
+    position: absolute;
+    right: 5%;
+    bottom: 5rem;
+    color: #fff;
+    font-size: small;
+    font-family: 'Raleway-Light';
+}
+/* ---Latest Info ---*/
+
+.latest-box{
+    position: relative;
+    z-index: 2;
+    width: 100vw;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);;
+    overflow: hidden;
+}
+.latest-bg-box{
+    display: grid;
+    width: 88%;
+    margin: 0 auto;
+    grid-template-columns: 100%;
+    grid-template-rows: 15rem 95vmin;
+}
+
+
+/* latest的导航 */
+.li-nav{
+    margin-top: 5rem;
+}
+.li-item{
+    line-height: 2em;
+    font-family: 'Garamond Premier Pro Display';
+    font-size: 3em;
+    letter-spacing: .2em;
+}
+
+.li-con{
+    font-family: '思源宋体';
+    color: #b5b29b;
+}
+
+/* latest的内容 */
+.li-cot-box{
+    height: 90vmin;
+    background-color: #fff;
+}
+.li-content{
+    display: flex;
+    width: 100%;
+    height: 90vmin;
+}
+.li-content li{
+    display: block;
+}
+.li-content li:nth-child(n+1){
+    flex: 1;
+}
+.li-content li:first-child{
+    flex: 2;
+}
+.li-content li:nth-child(2){
+    border-left: 1px solid rgba(0, 0, 0, .1);
+    border-right: 1px solid rgba(0, 0, 0, .1);
+}
+.li-content a{
+    display: block;
+}
+.li-cot-item-box{
+    width: 86%;
+    height: 87%;
+    /* background-color: #000; */
+}
+.li-cot-item-box a{
+    display: block;
+    width: 100%;
+    height: 70%;
+    background-image: url(../public/78552.jpg) ;
+    background-position: center center;
+    background-size:120%;
+    background-repeat: no-repeat;
+    transition: all ease 1s ;
+}
+.li-cot-item-box a:hover{
+    background-size: 130%;
+}
+/* 1-时间、2-标题、3-标签 */
+.li-content li:nth-child(3) .li-cot-item-box:nth-child(2),
+.li-content li:nth-child(2) .li-cot-item-box:nth-child(2){
+    margin: 1.5rem auto;
+}
+
+/* Latest's span */
+.li-cot-item-box span:nth-child(3),
+.li-cot-item-box span:nth-child(2){
+    display: block;
+    width: 100%;
+
+}
+.li-cot-tag{
+    display: inline-block;
+    font-family: 'Raleway-Light';
+    letter-spacing: .1em;
+    line-height: 3em;
+    color:#b5b29b;
+}
+.li-cot-time{
+    display: inline-block;
+    font-family: 'Raleway-Light';
+    color: #a5a5a5;
+    letter-spacing: .2em;
+    line-height: 3em;
+
+}
+.li-cot-item{
+    display: inline-block;
+    font-family: '思源宋体';
+    letter-spacing: .1em;
+    line-height: 2em;
+}
+
+.li-cot-blog-art{
+    display: block;
+    width: 40px;
+    height: 20px;
+}
+.li-content li .middle{
+    width: 80%;
+    height: 47%;
+    margin: 0 auto;
+}
+
+/* pages */
+
+.pages{
+    position: relative;
+    z-index: 2;
+    width: 100vw;
+    padding-bottom: 5rem;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+
+.page-box{
+    display: grid;
+    width: 80%;
+    margin: 0 auto;
+    grid-template-columns: 100%;
+    grid-template-rows: 15rem 80vmin;
+    background-color: #fff;
+}
+
+/* page的导航 */
+.page-nav-box{
+    margin-top: 3rem;
+}
+.left-page-nav{
+    float: left;
+}
+.left-page-nav span:nth-child(1){
+    line-height: 2em;
+    font-family: 'Garamond Premier Pro Display';
+    font-size: 3em;
+    letter-spacing: .2em;
+}
+.left-page-nav span:nth-child(3){
+    font-family: '思源宋体';
+    color: #b5b29b;
+}
+.right-page-nav{
+    float: right;
+}
+.right-page-nav ul{
+    margin-top: 4rem;
+}
+.right-page-nav li{
+    display: inline-block;
+    margin-left: 3rem;
+    font-family: 'Raleway-Light';
+    
+}
+.right-page-nav li a{
+    color: #000;
+}
+/* page的内容 */
+
+.page-cont-bg-img{
+    position: absolute;
+    z-index: 2;
+    top: 27rem;
+    left: 17rem;
+    width: 100%;
+    height: 55%;
+    background-color: rgb(246,246,246);
+}
+.page-cont-lang-box{
+    position: absolute;
+    display: flex;
+    z-index: 3;
+    top:15rem;
+    left: 18rem;
+    width: 100%;
+    height: 60%;
+}
+.page-cont-item{
+    position: relative;
+    flex: 1;
+}
+/* .w1{
+    background-color: yellow;
+}
+.w2{
+    background-color: green;
+}
+.w3{
+    background-color: pink;
+} */
+.w4{
+    flex: .7;
+}
+.page-cont-item a{
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all .5s;
+    width: 92%;
+    height: 95%;
+    background-color: #fff;
+    box-shadow: 3px 3px 10px -3px rgba(0,0,0,0.1);
+}
+.page-cont-item a:hover{
+    transform: translate(-50%,-53%);
+}
+.item-top-bg{
+    width: 100%;
+    height: 55%;
+    background-image: url(../public/clanndaIN.png);
+    background-position: center center;
+    background-size: 130%;
+    background-repeat: no-repeat;
+    transition: all .5s;
+}
+.backgroundChange{
+    background-size: 140%;
+}
+
+
+.item-buttom{
+    position: relative;
+    height: 45%;
+}
+.item-buttom-content-box{
+    position: absolute;
+    width: 80%;
+    height: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'Raleway-Light','思源宋体';
+}
+.item-buttom-content-box h1{
+    font-size: 1.5em;
+    font-weight: 300;
+    line-height: .5em;
+}
+.item-buttom-content-box .key{
+    display: block;
+    font-size: 1em;
+    color: #bfb3a2;
+}
+.item-buttom-content-box .intro{
+    display: block;
+    margin-top: 2rem;
+    font-size: .9em;
+    color: #5e5e5e;
+    line-height: 2em;
+}
+/* .lang-page-content{
+    position: relative;
+    display: flex;
+    width: 300%;
+    height: 90%;
+    top: 50%;
+    transform: translate(0,-50%);
+    transition: all .1 ease;
+}
+.lang-page-content:hover{
+    transform: translateY(-50%);
+}
+.page-small-box{
+    flex: 1;
+}
+.page-small-small-box{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.left-page-content{
+    flex: 1;
+    background-color: white;
+}
+.right-page-content{
+    flex: 1;
+    background-image: url(../public/203343.jpg);
+    background-position: center center;
+    background-size: cover;
+} */
+
+/* footer */
+
+.footer{
+    position: relative;
+    z-index: 2;
+    width: 100vw;
+    height: 60vh;
+    background-color: rgb(18,18,18);
+}
+
+.footer-content-top{
+    position: absolute;
+    display: flex;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    width: 80%;
+    height: 40%;
+}
+.footer-content-top-leftbox{
+    display: flex;
+    flex: 2;
+    border-right: 1px solid rgb(102,102,102);
+}
+
+.footer-content-top-leftbox-1part{
+    flex: .3;
+}
+.footer-content-top-leftbox-2part{
+    flex: .3;
+}
+.footer-content-top-leftbox-3part{
+    flex: 1;
+}
+
+/* 上-右 */
+.footer-content-top-rightbox{
+    flex: .8;
+}
+.footer-content-top-leftbox-part-header{
+    width: 100%;
+    height: 3rem;
+    color: #fff;
+    font-size: larger;
+    font-family: 'Garamond Premier Pro Display';
+    letter-spacing: .3rem;
+    line-height: 3rem;
+}
+.footer-Article{
+    display: block;
+    line-height: 2rem;
+    font-size: .8em;
+}
+.footer-common{
+    display: block;
+    font-family: 'Raleway-Light';
+    letter-spacing: .1rem;
+    color: rgb(102,102,102);
+}
+.footer-content-top-rightbox{
+    position: relative;
+    
+    
+}
+.e-mail-rel{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.e-mail-rel .top{
+    flex:.7;
+}
+.e-mail-rel .top span{
+    display: block;
+    margin-top: .6rem;
+    font-size: 1.9em;
+    font-family: 'Garamond Premier Pro Display';
+    letter-spacing: .1em;
+    color: #fff;
+}
+.e-mail-rel .middle{
+    flex:2;
+}
+.e-mail-rel .middle span{
+    display: block;
+    font-size: 14px;
+    font-family: 'Raleway-Light';
+    color: rgb(102,102,102);
+    letter-spacing: .2em;
+    line-height: .7em;
+    
+}
+.e-mail-rel .middle span:nth-child(1){
+    margin-top: 1.9rem;
+}
+
+/* 下 - 左*/
+.footer-content-buttom{
+    position: absolute;
+    display: flex;
+    z-index: 2;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    height: 20%;
+}
+.footer-content-buttom-left{
+    flex: 1;
+    padding-top: 4%;
+}
+.footer-content-buttom-left span{
+    margin-right: .3em;
+    color: rgb(102,102,102);
+}
+.footer-content-buttom-left span:nth-child(1){
+    font-size: 1em;
+}
+.footer-content-buttom-left span:nth-child(2){
+    font-size: 1.05em;
+}
+.footer-content-buttom-left span:nth-child(3){
+    font-size: 1em;
+    letter-spacing: .1em;
+}
+.footer-content-buttom-left span:nth-child(5){
+    font-size: 1em;
+    letter-spacing: .1em;
+}
+
+/* 下-右 */
+.footer-content-buttom-right{
+    display: flex;
+    flex: 1;
+}
+.footer-content-buttom-right .perch{
+    flex:3
+}
+.footer-content-buttom-right .wechat,
+.footer-content-buttom-right .flychat,
+.footer-content-buttom-right .twitter,
+.footer-content-buttom-right .github,
+.footer-content-buttom-right .goUp
+{
+    position: relative;
+    flex: 1;
+}
+.footer-content-buttom-right .wechat-img{
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    border: 1px solid rgb(102,102,102);
+    transition: all .5s;
+}
+.footer-content-buttom-right .goup-img:hover,
+.footer-content-buttom-right .wechat-img:hover{
+    background-color: #fff;
+}
+.footer-content-buttom-right .goUp{
+    flex: 1.5;
+}
+.footer-content-buttom-right .iconfont{
+    min-width: 50%!important;  
+}
+.footer-content-buttom-right .goup-img{
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 60px;
+    height: 60px;
+    border: 1px solid rgb(102,102,102);
+    transition: all .5s;
+}
+
+
+.contactQR{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 20vw;
+    height: 20vw;
+    background-size: 100%;
+}
+.wechatQR{
+    background-image: url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/img/QR/wechatQR.jpg);
+}
+.tgQR{
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 25vw;
+    background-image: url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/img/QR/tgQR.png);
+   
+}
+.twitterQR{
+    background-image: url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/img/QR/twitterQR.png);
+}
+.ant-back-top{
+    bottom: 10vh;
+}
+
+/* top-right */
+.showDrawer{
+    position: fixed;
+    z-index: 7;
+    height: 100vh;
+    width: 100vw;
+    pointer-events: none;
+    overflow: hidden;
+}
+/* 联系方式抽屉 */
+.wechatDrawer{
+    position: fixed;
+    z-index: 8;
+    height: 100vh;
+    width: 100vw;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+
+/* 鼠标图标 */
+.mouse-box{
+    position:absolute;
+    z-index:10;
+    background-color:#c7c7c7;
+    pointer-events: none;
+    transition: all .1s;
+  }
+.mouse-origin-size{
+    border-radius: 10px;
+    width:20px;
+    height:20px;
+}
+.mouse-change-size{
+    border-radius: 25px;
+    width:50px;
+    height:50px;
+}
+
+/* 加载条 */
+.progress-bar{
+    position: absolute;
+    z-index: 100;
+    height: 3px;
+    background-color: rgb(201, 38, 38);
+}
