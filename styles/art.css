@@ -1,40 +1,182 @@
-.art{
-    position: relative;
+
+.blog-index-box{
+    background-color: var(--art-bg-color);
+}
+
+.blog-index-nav{
+    display: flex;
     width: 100vw;
+    height: 10rem;
 }
-.restrain{
-    width: 85vw;
-    margin: 0 auto;
+.blog-index-nav-left{
+    position: relative;
+    flex: 1;
 }
-.art-box{
+.blog-index-nav-left-icon{
     position: fixed;
-    height: 6rem;
-    left: 50%;
-    transform: translate(-50%,0);
-    border-bottom: 1px solid #000;
-}
-.art-box>ul{
-    height: 6rem;
-    justify-content: right;
-}
-.ant-menu-submenu-title{
-    height: 6rem;
-}
-.ant-menu-submenu-title>span{
-    line-height: 6rem;
-}
-.art-nav-left-item{
-    position: absolute;
-    display: block;
-    top:50%;
+    width: 40px;
+    height: 40px;
+    top: 5rem;
+    left:9rem;
     transform: translate(0,-50%);
-    font-family: 'Cinzel';
-    font-size: 2em;
-    letter-spacing: .2em;
-    text-decoration: none;
-    color: #000;
-    transition: all .5;
+    background-image: url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/img/favicon.ico);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
-.art-nav-left-item:hover{
+.blog-index-nav-left-item{
+    position: fixed;
+    width: 15rem;
+    height: 40px;
+    top: 5rem;
+    left:calc(9rem + 40px);
+    padding-left: 1rem;
+    transform: translate(0,-50%);
     color: #000;
+    font-family: 'Raleway-Light';
+    font-size: large;
+    letter-spacing: .3rem;
+    line-height: 40px;
+    transition: all .5s;
+}
+.blog-index-nav-left-item:hover{
+    color: #000;
+    opacity: .5;
+}
+.blog-index-nav-right{
+    position: relative;
+    flex: 1;
+}
+.blog-index-nav-right-base{
+    position: fixed;
+    width: 4rem;
+    height: 4rem;
+    top: 5rem;
+    right:calc(9rem + 40px);
+    padding-right: 1rem;
+    transform: translate(0,-50%);
+    border-radius: 2.5rem;
+    box-shadow: 3px 3px 5px #e3e5ea,-3px -3px 5px #fff;
+}
+.b-i-n-unwind{
+    width: 10rem;
+}
+.blog-index-nav-right-wind-box{
+    position: relative;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    transform: translate(-50%,-50%);
+    width: 1.7rem;
+    height: .6rem;
+    background-color: #fff;
+    overflow: hidden;
+}
+.blog-index-nav-right-wind-up-line{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+}
+@keyframes TopspanWindMove {
+    from{
+        left: 0;
+    }
+    to{
+        left: -2.5rem;
+    }
+
+}
+@keyframes TopspanWindOut {
+    from{
+        left: -2.5rem;
+    }
+    to{
+        left: 0;
+    }
+
+}
+@keyframes DownspanWindMove {
+    from{
+        left: 0;
+    }
+    to{
+        left: calc(-2.5rem + (-10%));
+    }
+}
+@keyframes DownspanWindOut {
+    from{
+        left: calc(-2.5rem + (-10%));
+    }
+    to{
+        left: 0;
+    }
+}
+.top-wind-move{
+    animation-duration: 1s;
+    animation-name: TopspanWindMove;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+.top-wind-out{
+    animation-duration: 1s;
+    animation-name: TopspanWindOut;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+.down-wind-move{
+    animation-duration: 1s;
+    animation-name: DownspanWindMove;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+.down-wind-out{
+    animation-duration: 1s;
+    animation-name: DownspanWindOut;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+.blog-index-nav-right-wind-up-line::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 2.5rem;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+}
+.blog-index-nav-right-wind-down-line{
+    position: absolute;
+    bottom: 0;
+    width: 110%;
+    height: 2px;
+    background-color: #000;
+}
+.blog-index-nav-right-wind-down-line::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: calc(2.5rem + 10%);
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+}
+
+
+.blog-index-body{
+    display: flex;
+    width: 100vw;
+    height: 100vmax;
+}
+.blog-index-body-left{
+    flex: .5;
+    background-color: rgb(8, 197, 255);
+}
+.blog-index-body-right{
+    flex: 1;
+}
+.blog-index-fonter{
+    width: 100vw;
+    height: 25rem;
+    background-color: #f2f2f2;
 }

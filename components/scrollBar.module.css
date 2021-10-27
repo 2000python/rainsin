@@ -1,7 +1,0 @@
-.scroll-progress-bar{
-    position: fixed;
-    z-index: 109;
-    top: 0;
-    height: 3px;
-    background-color: rgb(28, 238, 9);
-}

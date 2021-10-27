@@ -10,17 +10,11 @@
 //     domains: ['rainsin-1305486451.cos.ap-nanjing.myqcloud.com'],
 //   },
 // }
-const code = require('remark-code-screenshot')
-const withMDX = require("@next/mdx")({
-  extension: /\.mdx?$/,
-  remarkPlugins:[code]
-    });
-module.exports = withMDX({
-              pageExtensions: ["js", "jsx", "md", "mdx"],
+module.exports = {
               reactStrictMode: true,
               optimizeFonts: false,
               images: {
                 domains: ['rainsin-1305486451.cos.ap-nanjing.myqcloud.com'],
               },
-})
+}
         

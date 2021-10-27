@@ -12,7 +12,7 @@ export default class ProgressBar extends React.Component{
         window.onscroll = () => {
             const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
             const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const screenWight = window.screen.width;
+            const screenWight = document.documentElement.clientWidth;
             this.setState({
                 left: screenWight * (scrollTop / scrollHeight),
             })

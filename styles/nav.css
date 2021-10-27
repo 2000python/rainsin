@@ -3,7 +3,7 @@
     z-index: 3;
     width: 100vw;
     transition: height .8s;
-    background-color: #fff;
+    background-color: var(--art-bg-color);
 }
 
 /* nav高度变化 */
@@ -39,7 +39,6 @@
     display: flex;
     width: 88vw;
     height: 100%;
-    background-color: #fff;
     margin: 0 auto;
 }
 /* left */
@@ -112,7 +111,7 @@
     z-index: 3;
     height: 60vh;
     width: 100vw;
-    background-color: #fff;
+    background-color: var(--art-bg-color);
     transition: all .5s;
     pointer-events: none;
     border-bottom: 1px solid rgba(0, 0, 0, .1);

@@ -17,6 +17,7 @@
     z-index: 1;
     width: 100vw;
     height: 100vh;
+    background-color: var(--art-bg-color);
 }
 
 .b-img-box {
@@ -62,6 +63,44 @@
     font-size: .7rem;
     line-height: 3em;
 }
+
+.b-t-mouse{
+    position: absolute;
+    left:50%;
+    bottom: 5rem;
+    height: 2.7rem;
+    width: calc(2.7rem * (3 / 5));
+    transform: translate(-50%,0);
+    border: 1px solid #fff;
+    border-radius: calc(2.7rem * (3 / 10));
+}
+@keyframes mousePulley {
+    0% {
+        transform: translate(-50%,-50%); 
+    }
+    50% {
+        transform: translate(-50%,-15%);
+    }
+    100% {
+        transform: translate(-50%,-50%);
+    }
+}
+.b-t-mouse::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    height: 10px;
+    width: 5px;
+    border-radius: calc(5px / 2);
+    background-color: #fff;
+    animation-duration: 1.4s;
+    animation-name: mousePulley;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+
 .b-t-design{
     position: absolute;
     right: 5%;
@@ -76,7 +115,7 @@
     position: relative;
     z-index: 2;
     width: 100vw;
-    background-color: #fff;
+    background-color: var(--art-bg-color);
     border-bottom: 1px solid rgba(0, 0, 0, .1);;
     overflow: hidden;
 }
@@ -108,7 +147,7 @@
 /* latest的内容 */
 .li-cot-box{
     height: 90vmin;
-    background-color: #fff;
+    background-color: var(--art-bg-color);
 }
 .li-content{
     display: flex;
@@ -140,7 +179,7 @@
     display: block;
     width: 100%;
     height: 70%;
-    background-image: url(../public/78552.jpg) ;
+    background-image: url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/img/55.jpg) ;
     background-position: center center;
     background-size:120%;
     background-repeat: no-repeat;
@@ -185,9 +224,41 @@
 }
 
 .li-cot-blog-art{
+    position: relative;
     display: block;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 2.5rem;
+    box-shadow: 3px 3px 5px #e3e5ea,-3px -3px 5px #fff;
+    /* transition: width .6s cubic-bezier(.99,.03,.38,.96),opacity .6s; */
+    overflow: hidden;
+    transition: all .5s;
+}
+.unwind{
+    width: 20rem;
+}
+.li-cot-blog-art div{
+    position: absolute;
+    display: block;
+    height: 40px;
     width: 40px;
-    height: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-position: center center;
+    background-size: cover;
+    transition: all .5s;
+}
+.li-cot-blog-art div.unwind::before{
+    content: 'Read\00A0More';
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #b5b29b;
+    font-family: 'Raleway-Light';
+    font-size: large;
 }
 .li-content li .middle{
     width: 80%;
@@ -202,7 +273,7 @@
     z-index: 2;
     width: 100vw;
     padding-bottom: 5rem;
-    background-color: #fff;
+    background-color: var(--art-bg-color);
     border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
@@ -213,7 +284,7 @@
     margin: 0 auto;
     grid-template-columns: 100%;
     grid-template-rows: 15rem 80vmin;
-    background-color: #fff;
+    background-color: var(--art-bg-color);
 }
 
 /* page的导航 */
@@ -257,7 +328,7 @@
     left: 17rem;
     width: 100%;
     height: 55%;
-    background-color: rgb(246,246,246);
+    background-color: #fff;
 }
 .page-cont-lang-box{
     position: absolute;
@@ -293,7 +364,7 @@
     transition: all .5s;
     width: 92%;
     height: 95%;
-    background-color: #fff;
+    background-color: var(--art-bg-color);
     box-shadow: 3px 3px 10px -3px rgba(0,0,0,0.1);
 }
 .page-cont-item a:hover{
@@ -608,29 +679,3 @@
 }
 
 
-/* 鼠标图标 */
-.mouse-box{
-    position:absolute;
-    z-index:10;
-    background-color:#c7c7c7;
-    pointer-events: none;
-    transition: all .1s;
-  }
-.mouse-origin-size{
-    border-radius: 10px;
-    width:20px;
-    height:20px;
-}
-.mouse-change-size{
-    border-radius: 25px;
-    width:50px;
-    height:50px;
-}
-
-/* 加载条 */
-.progress-bar{
-    position: absolute;
-    z-index: 100;
-    height: 3px;
-    background-color: rgb(201, 38, 38);
-}

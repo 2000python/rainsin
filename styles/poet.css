@@ -2,9 +2,6 @@
     --height-nav:15rem;
     --bg-color:#fff;
 }
-html{
-    background-color: var(--bg-color);
-}
 .poet-nav{
     position: absolute;
     z-index: 0;

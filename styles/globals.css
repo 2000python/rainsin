@@ -6,8 +6,8 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     /* 火狐浏览器取消滚动条 */
   scrollbar-width: none;
+  background-color: var(--art-bg-color);
 }
-
 a {
   color: inherit;
   text-decoration: none;
@@ -25,12 +25,12 @@ ul{
   box-sizing: border-box;
   --nav-height:7.7rem;
   --nav-vary-height:11rem;
-  --art-bg-color:rgb(253, 248, 237);
+  --art-bg-color:#f8f8f8;
 }
 body{
   position: relative;
   overflow-x: hidden;
-  
+  background-color: var(--art-bg-color);
 }
 /* 取消滚动条 */
 body::-webkit-scrollbar{
@@ -41,34 +41,60 @@ body::-webkit-scrollbar{
   z-index: 109;
   top: 0;
   height: 3px;
-  background-color: rgb(28, 238, 9);
+  background-color: #b5b29b;
+}
+/* 鼠标图标 */
+.mouse-box{
+  position:absolute;
+  z-index:10;
+  background-color:#c7c7c7;
+  pointer-events: none;
+  transition: all .1s;
+}
+.mouse-origin-size{
+  border-radius: 10px;
+  width:20px;
+  height:20px;
+}
+.mouse-change-size{
+  border-radius: 25px;
+  width:50px;
+  height:50px;
+}
+
+/* 加载条 */
+.progress-bar{
+  position: absolute;
+  z-index: 100;
+  height: 3px;
+  background-color: #b5b29b;
 }
 @font-face {
   font-family: 'Cinzel';
-  src: url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/font/Cinzel-Regular.ttf);
+  src: url(../public/fonts/Cinzel/Cinzel-Regular.ttf);
 }
 
 @font-face {
   font-family: 'Raleway-Light';
-  src: url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/font/Raleway-Light.ttf);
+  src: url(../public/fonts/Raleway/Raleway-Light.ttf);
 }
 
 @font-face {
   font-family: '思源宋体';
-  src: url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/font/NotoSerifSC-Light.otf);
+  src: url(../public/fonts/Noto_Serif_SC/NotoSerifSC-Light.otf);
 }
 @font-face {
   font-family: 'MontserratAlternates';
-  src: url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/font/MontserratAlternates-Light.ttf);
+  src: url(../public/fonts/Montserrat_Alternates/MontserratAlternates-Light.ttf);
 }
 @font-face{
   font-family: 'Garamond Premier Pro Display';
-  src:url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/font/Garamond%20Premier%20Pro%20Display.otf)
+  src:url(../public/fonts/Garamond\ Premier\ Pro\ Display.otf)
 }
-@font-face {
+/* @font-face {
   font-family: 'zhaomf';
   src: url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/font/ZMF.TTF);
-}
+} */
 @font-face {
   font-family: '方正小篆';
   src: url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/font/FZXZTF.OTF);

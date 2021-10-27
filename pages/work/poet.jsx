@@ -30,7 +30,7 @@ export default class Poetry extends React.Component{
 
                         </div>
                         <ul className='poet-right-nav-item-box'>
-                            <li><Link href='#'><a className='shake'>首页</a></Link></li>
+                            <li><Link href='#?id=1'><a className='shake'>首页</a></Link></li>
                             <li><Link href='#'><a>诗词</a></Link></li>
                             <li><Link href='#'><a>元曲</a></Link></li>
                             <li><Link href='#'><a>古籍</a></Link></li>
@@ -94,9 +94,9 @@ export default class Poetry extends React.Component{
     }
 }
 
-export async function getStaticProps() {
-    const res = await fetch('http://127.0.0.1:7001/')
-    // const res = await fetch(`https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/poet-database/${ tag}.json`)
+export async function getStaticProps(context) {
+    // const res = await fetch('http://127.0.0.1:7001/')
+    const res = await fetch(`https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/poet-database/${ context.query.tag}.json`)
     const posts = await res.json()
     return {
       props: {

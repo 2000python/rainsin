@@ -58,6 +58,7 @@ import img from '../public/78544.jpg'
 import Mouse from '../components/mouse'
 import Loading from './api/loading'
 import ScrollBar from "../components/scrollBar";
+import { urlObjectKeys } from 'next/dist/next-server/lib/utils'
 // import dynamic from 'next/dynamic'
 
 // const PubSub = dynamic(import('pubsub-js'),{ssr:false})
@@ -78,7 +79,7 @@ function BannerText() {
   return (
 
       <div className='banner-t-box'>
-    <div className='banner-text'>
+    <div className='banner-text animate__fadeIn'>
           <span>QUIET </span>
           <br />
         <span>STORY</span>
@@ -93,6 +94,7 @@ function BannerText() {
           <br />
           分享我的技术心得和快乐,
       </div>
+      <div className='b-t-mouse'></div>
       <div className='b-t-design'>Design by Rainsin</div>
       <div></div>
       </div>
@@ -104,7 +106,25 @@ class LatestInfo extends React.Component{
   state = {
     time: '2021.8.17',
     item: '服务端渲染框架',
-    tag: 'CSS'
+    tag: 'CSS',
+    iswind: true,
+    iseye: 'url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/img/%E7%AE%AD%E5%A4%B4_%E5%90%91%E5%8F%B3_o.png)',
+    classNameWindBox: 'li-cot-blog-art',
+    beforeClassName:''
+  }
+  changeWind = () => {
+    this.setState({
+      iseye: 'none',
+      classNameWindBox: 'li-cot-blog-art unwind',
+      beforeClassName:'unwind'
+    })
+  }
+  restoreWind = () => {
+    this.setState({
+      iseye: 'url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/img/%E7%AE%AD%E5%A4%B4_%E5%90%91%E5%8F%B3_o.png)',
+      classNameWindBox: 'li-cot-blog-art',
+      beforeClassName: ''
+    })
   }
   render() {
     return (
@@ -114,33 +134,32 @@ class LatestInfo extends React.Component{
           <span className='li-item'>LATEST INFO</span>
           <br />
             <span className='li-con'>最新资讯</span>
-            
         </div>
         <div className='li-cot-box'>
           <ul className='li-content'>
               <li className='big-li-cot-box'>
                 <div className='li-cot-item-box'>
                   <Link href='/art/yumao'>
-                  <a style={{backgroundImage:'url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/img/%E5%9B%9B%E5%A4%A7%E5%A4%A9%E7%8E%8B.png)'}}>
+                  <a style={{backgroundImage:'url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/img/webp/yumaoqiu.webp)'}}>
                      
                     </a>
                     </Link>
                   <span className='li-cot-time'>2021.10.30</span>
                   <span className='li-cot-item'>羽毛球技术要点（个人观点）</span>
-                  <span className='li-cot-tag'>{ this.state.tag}</span>
+                  <span className='li-cot-tag'>technology</span>
                   
                 </div>
                 <div className='li-cot-blog-link'></div>
-                <Link href='#'>
-                  <a className='li-cot-blog-art' href='#'>
-              
+                <Link href='/blog/blogindex'>
+                  <a className={this.state.classNameWindBox} onMouseOver={this.changeWind} onMouseOut={this.restoreWind}>
+                      <div className={this.state.beforeClassName} style={{backgroundImage:this.state.iseye}}></div>
                   </a>
                 </Link>
             </li>
               <li>
                 <div className='li-cot-item-box middle'>
                   <Link href='#'>
-                  <a href='#'>
+                  <a>
                      
                   </a>
                   </Link>
@@ -150,9 +169,11 @@ class LatestInfo extends React.Component{
                   
                 </div>
                 <div className='li-cot-item-box middle'>
-                  <a href='#' >
+                <Link href='#'>
+                  <a>
                      
                   </a>
+                  </Link>
                   <span className='li-cot-time'>2021.8.17</span>
                   <span className='li-cot-item'>服务端渲染框架</span>
                   <span className='li-cot-tag'>technology</span>
@@ -161,18 +182,22 @@ class LatestInfo extends React.Component{
             </li>
               <li>
               <div className='li-cot-item-box middle'>
-                  <a href='#' >
+              <Link href='#'>
+                  <a>
                      
                   </a>
+                  </Link>
                   <span className='li-cot-time'>2021.8.17</span>
                   <span className='li-cot-item'>服务端渲染框架</span>
                   <span className='li-cot-tag'>technology</span>
                   
                 </div>
                 <div className='li-cot-item-box middle'>
-                  <a href='#' >
+                <Link href='#'>
+                  <a>
                      
                   </a>
+                  </Link>
                   <span className='li-cot-time'>2021.8.17</span>
                   <span className='li-cot-item'>服务端渲染框架</span>
                   <span className='li-cot-tag'>technology</span>
@@ -243,12 +268,12 @@ const backgroundAlter = (id) => {
             <div className='page-cont-item w2'>
             <Link href='#'>
                 <a className='item' onMouseOver={()=>backgroundChange(2)} onMouseOut={()=>backgroundAlter(2)}>
-                  <div className={'item-top-bg '+change.item2} ></div>
+                  <div className={'item-top-bg '+change.item2} style={{backgroundImage: 'url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/img/webp/%E9%AD%94%E6%96%B9.webp)'}}></div>
                   <div className='item-buttom'>
                   <div className='item-buttom-content-box'>
-                      <h1>CLANNAD-クラナド</h1>
-                      <span className='key'>Key</span>
-                      <span className='intro'>没有豪言壮语，没有伟人语录，只有一个个平常人就会有的情感——爱情、亲情、友情所组成的故事。</span>
+                      <h1>魔方公式集</h1>
+                      <span className='key'>Rainsin</span>
+                      <span className='intro'>正阶、异形魔方公式集</span>
                     </div>
                   </div>
                 </a>
@@ -509,6 +534,10 @@ export default class Home extends React.Component{
         <>
           <Head>
             <title>Apple tree - 尉旭胜(rainsin)的博客。</title>
+            <link
+              rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+                />
           </Head>
           <ScrollBar/>
           <Loading loading={this.state.loadingShow} />
