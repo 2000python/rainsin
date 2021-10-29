@@ -452,10 +452,12 @@ function Footer() {
               <Image className='iconfont' src='https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/img/twitter.svg' alt='wechat' layout='fill'/>
               </div>
             </div>
-            <div className=' github' onClick={DrawerShow.githubDrawer}>
+            <div className=' github' >
+              <Link href='https://github.com/2000python'>
             <div className='wechat-img cursor-section'>
               <Image className='iconfont' src='https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/img/github.svg' alt='wechat' layout='fill'/>
               </div>
+              </Link>
             </div>
             <div className='goUp'>
             </div>
