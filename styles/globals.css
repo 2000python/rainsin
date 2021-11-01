@@ -24,7 +24,7 @@ ul{
 :root {
   box-sizing: border-box;
   --nav-height:7.7rem;
-  --nav-vary-height:11rem;
+  --nav-vary-height:10rem;
   --art-bg-color:#f8f8f8;
 }
 body{
@@ -69,7 +69,7 @@ body::-webkit-scrollbar{
   height: 3px;
   background-color: #b5b29b;
 }
-@font-face {
+/* @font-face {
   font-family: 'Cinzel';
   src: url(../public/fonts/Cinzel/Cinzel-Regular.ttf);
 }
@@ -91,11 +91,25 @@ body::-webkit-scrollbar{
   font-family: 'Garamond Premier Pro Display';
   src:url(../public/fonts/Garamond\ Premier\ Pro\ Display.otf)
 }
-/* @font-face {
+@font-face {
   font-family: 'zhaomf';
-  src: url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/font/ZMF.TTF);
-} */
+  src: url(../public/fonts/FZZhaoMFXSJF.TTF);
+}
 @font-face {
   font-family: '方正小篆';
   src: url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/font/FZXZTF.OTF);
+} */
+
+@font-face {
+  font-family: 'Raleway-Light';
+  src: url(../public/fonts/Raleway/Raleway-Light.ttf)format("truetype");
+}
+
+@font-face {
+  font-family: '思源宋体';
+  src: url(../public/fonts/Noto_Serif_SC/NotoSerifSC-Regular.otf);
+}
+@font-face{
+  font-family: 'Garamond Premier Pro Display';
+  src:url(../public/fonts/Garamond\ Premier\ Pro\ Display.otf)
 }

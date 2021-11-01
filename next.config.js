@@ -14,7 +14,7 @@ module.exports = {
               reactStrictMode: true,
               optimizeFonts: false,
               images: {
-                domains: ['rainsin-1305486451.cos.ap-nanjing.myqcloud.com'],
+                domains: ['rainsin-1305486451.file.myqcloud.com'],
               },
 }
         

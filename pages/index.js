@@ -68,7 +68,7 @@ class Banner extends React.Component{
       <div>
       <div className='banner-img'>
         <div className='b-img-box'>
-        <Image src='https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/img/11.jpg' className='banner-image' alt='img' layout='fill'></Image>
+        <Image src='https://rainsin-1305486451.file.myqcloud.com/img/11.jpg' className='banner-image' alt='img' layout='fill'></Image>
         </div>           
         </div>
       </div>  
@@ -108,7 +108,7 @@ class LatestInfo extends React.Component{
     item: '服务端渲染框架',
     tag: 'CSS',
     iswind: true,
-    iseye: 'url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/img/%E7%AE%AD%E5%A4%B4_%E5%90%91%E5%8F%B3_o.png)',
+    iseye: 'url(https://rainsin-1305486451.file.myqcloud.com/img/%E7%AE%AD%E5%A4%B4_%E5%90%91%E5%8F%B3_o.png)',
     classNameWindBox: 'li-cot-blog-art',
     beforeClassName:''
   }
@@ -121,7 +121,7 @@ class LatestInfo extends React.Component{
   }
   restoreWind = () => {
     this.setState({
-      iseye: 'url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/img/%E7%AE%AD%E5%A4%B4_%E5%90%91%E5%8F%B3_o.png)',
+      iseye: 'url(https://rainsin-1305486451.file.myqcloud.com/img/%E7%AE%AD%E5%A4%B4_%E5%90%91%E5%8F%B3_o.png)',
       classNameWindBox: 'li-cot-blog-art',
       beforeClassName: ''
     })
@@ -139,8 +139,8 @@ class LatestInfo extends React.Component{
           <ul className='li-content'>
               <li className='big-li-cot-box'>
                 <div className='li-cot-item-box'>
-                  <Link href='/art/yumao'>
-                  <a style={{backgroundImage:'url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/img/webp/yumaoqiu.webp)'}}>
+                  <Link href='/blog/blogindex'>
+                  <a style={{backgroundImage:'url(https://rainsin-1305486451.file.myqcloud.com/img/webp/%E6%9E%97%E4%B8%B9.webp)'}}>
                      
                     </a>
                     </Link>
@@ -163,7 +163,7 @@ class LatestInfo extends React.Component{
                      
                   </a>
                   </Link>
-                  <span className='li-cot-time'>2021.8.17</span>
+                  <span className='li-cot-time'>2021.9.17</span>
                   <span className='li-cot-item'>服务端渲染框架</span>
                   <span className='li-cot-tag'>technology</span>
                   
@@ -174,7 +174,7 @@ class LatestInfo extends React.Component{
                      
                   </a>
                   </Link>
-                  <span className='li-cot-time'>2021.8.17</span>
+                  <span className='li-cot-time'>2021.9.17</span>
                   <span className='li-cot-item'>服务端渲染框架</span>
                   <span className='li-cot-tag'>technology</span>
                   
@@ -187,7 +187,7 @@ class LatestInfo extends React.Component{
                      
                   </a>
                   </Link>
-                  <span className='li-cot-time'>2021.8.17</span>
+                  <span className='li-cot-time'>2021.9.17</span>
                   <span className='li-cot-item'>服务端渲染框架</span>
                   <span className='li-cot-tag'>technology</span>
                   
@@ -198,7 +198,7 @@ class LatestInfo extends React.Component{
                      
                   </a>
                   </Link>
-                  <span className='li-cot-time'>2021.8.17</span>
+                  <span className='li-cot-time'>2021.9.17</span>
                   <span className='li-cot-item'>服务端渲染框架</span>
                   <span className='li-cot-tag'>technology</span>
                   
@@ -268,7 +268,7 @@ const backgroundAlter = (id) => {
             <div className='page-cont-item w2'>
             <Link href='#'>
                 <a className='item' onMouseOver={()=>backgroundChange(2)} onMouseOut={()=>backgroundAlter(2)}>
-                  <div className={'item-top-bg '+change.item2} style={{backgroundImage: 'url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/img/webp/%E9%AD%94%E6%96%B9.webp)'}}></div>
+                  <div className={'item-top-bg '+change.item2} style={{backgroundImage: 'url(https://rainsin-1305486451.file.myqcloud.com/img/webp/mofang.webp)'}}></div>
                   <div className='item-buttom'>
                   <div className='item-buttom-content-box'>
                       <h1>魔方公式集</h1>
@@ -282,12 +282,12 @@ const backgroundAlter = (id) => {
             <div className='page-cont-item w3'>
             <Link href={{pathname:'/work/poet',query:{tag:'shijing'}}} >
                 <a className='item' onMouseOver={()=>backgroundChange(3)} onMouseOut={()=>backgroundAlter(3)}>
-                  <div className={'item-top-bg ' + change.item3} style={{ backgroundImage: 'url(https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/img/%E6%80%9D%E8%AF%97.jpeg)' }}></div>
+                  <div className={'item-top-bg ' + change.item3} style={{ backgroundImage: 'url(https://rainsin-1305486451.file.myqcloud.com/img/webp/%E8%B5%B5%E5%AD%9F%E9%A0%AB.webp)' }}></div>
                   <div className='item-buttom'>
                   <div className='item-buttom-content-box'>
-                      <h1>诗词库</h1>
+                      <h1>诗词书画库</h1>
                       <span className='key'>Rainsin</span>
-                      <span className='intro'>莫听穿林打叶声，何妨吟啸且徐行。<br/>竹杖芒鞋轻胜马，谁怕？<br/>一蓑烟雨任平生。</span>
+                      <span className='intro'>渊明乞食，鲁公乞米，<br/>赖多古贤，可为口实。<br/>（最喜欢赵孟頫的手札了）</span>
                     </div>
                   </div>
                 </a>
@@ -439,23 +439,23 @@ function Footer() {
             <div className='perch'></div>
             <div className='wechat' onClick={DrawerShow.wechatDrawer}>
               <div className='cursor-section wechat-img'>
-                <Image className='iconfont' src='https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/img/wechat.svg' alt='wechat' layout='fill'/>
+                <Image className='iconfont' src='https://rainsin-1305486451.file.myqcloud.com/img/wechat.svg' alt='wechat' layout='fill'/>
               </div>
             </div>
             <div className='flychat' onClick={DrawerShow.flychatDrawer}>
             <div className='cursor-section wechat-img'>
-              <Image className='iconfont' src='https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/img/telegram.svg' alt='wechat' layout='fill'/>
+              <Image className='iconfont' src='https://rainsin-1305486451.file.myqcloud.com/img/telegram.svg' alt='wechat' layout='fill'/>
               </div>
             </div>
             <div className='twitter' onClick={DrawerShow.twitterDrawer}>
             <div className='cursor-section wechat-img'>
-              <Image className='iconfont' src='https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/img/twitter.svg' alt='wechat' layout='fill'/>
+              <Image className='iconfont' src='https://rainsin-1305486451.file.myqcloud.com/img/twitter.svg' alt='wechat' layout='fill'/>
               </div>
             </div>
             <div className=' github' >
               <Link href='https://github.com/2000python'>
             <div className='wechat-img cursor-section'>
-              <Image className='iconfont' src='https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/img/github.svg' alt='wechat' layout='fill'/>
+              <Image className='iconfont' src='https://rainsin-1305486451.file.myqcloud.com/img/github.svg' alt='wechat' layout='fill'/>
               </div>
               </Link>
             </div>
@@ -492,7 +492,7 @@ class BackUp extends React.Component{
     return (
       <BackTop visibilityHeight={2400} style={{bottom:'10vh',zIndex:'3'}}>
             <a className='goup-img cursor-section' href='#' >
-              <Image id='cursor-section' className='cursor-section iconfont' src='https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/img/direction-up.svg' alt='wechat' layout='fill'/>
+              <Image id='cursor-section' className='cursor-section iconfont' src='https://rainsin-1305486451.file.myqcloud.com/img/direction-up.svg' alt='wechat' layout='fill'/>
             </a>
       </BackTop>
     )
@@ -536,10 +536,6 @@ export default class Home extends React.Component{
         <>
           <Head>
             <title>Apple tree - 尉旭胜(rainsin)的博客。</title>
-            <link
-              rel="stylesheet"
-              href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-                />
           </Head>
           <ScrollBar/>
           <Loading loading={this.state.loadingShow} />

@@ -4,10 +4,8 @@
  */
 import React from 'react'
 import ScrollBar from "../../components/scrollBar";
-import ArtNav from '../../components/artnav';
+// import ArtNav from '../../components/artnav';
 import Head from 'next/head';
-import Link from 'next/link';
-import Image from 'next/image';
 
 export default class blogIndex extends React.Component{
     
@@ -18,7 +16,7 @@ export default class blogIndex extends React.Component{
                     <title>Riansin</title>
                 </Head>
                 <ScrollBar />
-                <div className='blog-index-box'>
+                {/* <div className='blog-index-box'>
                     <ArtNav />
                     <div className='blog-index-body'>
                         <div className='blog-index-body-left'>
@@ -31,6 +29,9 @@ export default class blogIndex extends React.Component{
                     <div className='blog-index-fonter'>
                         
                     </div>
+                </div> */}
+                <div className='mianshi'>
+                    找工作期间，先暂停一下！
                 </div>
             </>
         )

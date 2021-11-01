@@ -133,7 +133,7 @@ class Nav extends React.Component{
                 <div className='website' style={{ opacity:this.state.isWebsiteShow}}>
                     <div className='website-box'>
                         <div className='left-website-box web-flex'>
-                            <video className='website-video' src='https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/%E6%88%91%E7%9A%84%E5%BD%B1%E7%89%87.mov'  loop={true}></video>
+                            <video className='website-video' src='https://rainsin-1305486451.file.myqcloud.com/%E6%88%91%E7%9A%84%E5%BD%B1%E7%89%87.mov'  loop={true}></video>
                         </div>
                             <div className='right-website-box web-flex'>
                                 <div className='r-web-content-box'>
@@ -164,7 +164,7 @@ class Nav extends React.Component{
                 <div className='showDrawer'>
                     <Drawer title="莫听穿林打叶声，何妨吟啸且徐行。" width={760} closable={true} onClose={this.closeShow} visible={this.state.show} placement='right' zIndex={4} getContainer={false} style={{ position: 'absolute' }}>
                         <div className='nav-drawer-img'>
-                            <Image src='https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/img/IU.gif' layout='fill' alt='IU'></Image>
+                            <Image src='https://rainsin-1305486451.file.myqcloud.com/img/IU.gif' layout='fill' alt='IU'></Image>
                         </div>
                     </Drawer>
                 </div>
