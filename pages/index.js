@@ -40,8 +40,8 @@
 
 /*
  * @Author: 尉旭胜（Rainsin）
- * @Date: 2021-08-06 19:06:37
- * @LastEditTime: 2021-08-09 16:17:59
+ * @Date: 2021-09-06 19:06:37
+ * @LastEditTime: 2021-09-09 16:17:59
  * @Description: 尉旭胜（Rainsin）
  * @FilePath: /react-blog/blog/pages/index.js
  */
@@ -68,7 +68,7 @@ class Banner extends React.Component{
       <div>
       <div className='banner-img'>
         <div className='b-img-box'>
-        <Image src='https://rainsin-1305486451.file.myqcloud.com/img/11.jpg' className='banner-image' alt='img' layout='fill'></Image>
+        <Image src='https://rainsin-1305486451.file.myqcloud.com/img/webp/11.webp' className='banner-image' alt='img' layout='fill'></Image>
         </div>           
         </div>
       </div>  
