@@ -48,20 +48,16 @@
 import React,{useState} from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import Router,{ useRouter } from 'next/router'
 import Image from 'next/image'
 import Nav from '../components/nav'
 import { RightOutlined } from '@ant-design/icons';
 import {Drawer,BackTop} from 'antd'
 import 'antd/dist/antd.css';
-import img from '../public/78544.jpg'
 import Mouse from '../components/mouse'
 import Loading from './api/loading'
 import ScrollBar from "../components/scrollBar";
-import { urlObjectKeys } from 'next/dist/next-server/lib/utils'
-// import dynamic from 'next/dynamic'
 
-// const PubSub = dynamic(import('pubsub-js'),{ssr:false})
+
 class Banner extends React.Component{
   render() {
     return (
