@@ -23,8 +23,8 @@ ul{
 }
 :root {
   box-sizing: border-box;
-  --nav-height:7.7rem;
-  --nav-vary-height:10rem;
+  --nav-height:6rem;
+  --nav-vary-height:8rem;
   --art-bg-color:#f8f8f8;
 }
 body{

@@ -1,28 +1,53 @@
 {
   "polyfillFiles": [
-    "static/chunks/polyfills.js"
+    "static/chunks/polyfills-a54b4f32bdc1ef890ddd.js"
   ],
-  "devFiles": [
-    "static/chunks/react-refresh.js"
-  ],
-  "ampDevFiles": [
-    "static/chunks/webpack.js",
-    "static/chunks/amp.js"
-  ],
+  "devFiles": [],
+  "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/development/_buildManifest.js",
-    "static/development/_ssgManifest.js"
+    "static/hg0bhjBBpaOWspws1vYMY/_buildManifest.js",
+    "static/hg0bhjBBpaOWspws1vYMY/_ssgManifest.js"
   ],
   "pages": {
+    "/": [
+      "static/chunks/webpack-61095c13c5984b221292.js",
+      "static/chunks/framework-92300432a1172ef1338b.js",
+      "static/chunks/main-0786f78015b8368a3815.js",
+      "static/chunks/197-4063a548ec6474bfcd66.js",
+      "static/chunks/190-644420fe39ee1a38b57b.js",
+      "static/chunks/pages/index-533ab07acb0639c93709.js"
+    ],
     "/_app": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/_app.js"
+      "static/chunks/webpack-61095c13c5984b221292.js",
+      "static/chunks/framework-92300432a1172ef1338b.js",
+      "static/chunks/main-0786f78015b8368a3815.js",
+      "static/css/7ecf2ca1aff017eb6896.css",
+      "static/chunks/pages/_app-9fca9def35dce2732222.js"
     ],
     "/_error": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/_error.js"
+      "static/chunks/webpack-61095c13c5984b221292.js",
+      "static/chunks/framework-92300432a1172ef1338b.js",
+      "static/chunks/main-0786f78015b8368a3815.js",
+      "static/chunks/pages/_error-72317e45483345e7b2fb.js"
+    ],
+    "/blog/blogindex": [
+      "static/chunks/webpack-61095c13c5984b221292.js",
+      "static/chunks/framework-92300432a1172ef1338b.js",
+      "static/chunks/main-0786f78015b8368a3815.js",
+      "static/chunks/pages/blog/blogindex-8a0ba4f3942992c0f1e7.js"
+    ],
+    "/work/clannad": [
+      "static/chunks/webpack-61095c13c5984b221292.js",
+      "static/chunks/framework-92300432a1172ef1338b.js",
+      "static/chunks/main-0786f78015b8368a3815.js",
+      "static/chunks/pages/work/clannad-a66f001102499c1b80d7.js"
+    ],
+    "/work/poet": [
+      "static/chunks/webpack-61095c13c5984b221292.js",
+      "static/chunks/framework-92300432a1172ef1338b.js",
+      "static/chunks/main-0786f78015b8368a3815.js",
+      "static/chunks/197-4063a548ec6474bfcd66.js",
+      "static/chunks/pages/work/poet-450f6a14a1f9d12cb571.js"
     ]
   },
   "ampFirstPages": []

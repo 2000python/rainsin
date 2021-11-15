@@ -94,13 +94,13 @@ export default class Poetry extends React.Component{
     }
 }
 
-export async function getStaticProps(context) {
-    // const res = await fetch('http://127.0.0.1:7001/')
-    const res = await fetch(`https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/poet-database/${ context.query.tag}.json`)
-    const posts = await res.json()
-    return {
-      props: {
-        posts,
-      },
-    }
-}
+// export async function getStaticProps(context) {
+//     // const res = await fetch('http://127.0.0.1:7001/')
+//     const res = await fetch(`https://rainsin-1305486451.cos.ap-nanjing.myqcloud.com/poet-database/${ context.query.tag}.json`)
+//     const posts = await res.json()
+//     return {
+//       props: {
+//         posts,
+//       },
+//     }
+// }

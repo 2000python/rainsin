@@ -1,5 +1,12 @@
 {
   "/_app": "pages/_app.js",
+  "/api/hello": "pages/api/hello.js",
+  "/api/loading": "pages/api/loading.js",
+  "/blog/blogindex": "pages/blog/blogindex.html",
+  "/": "pages/index.html",
+  "/work/clannad": "pages/work/clannad.html",
+  "/work/poet": "pages/work/poet.html",
   "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js"
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.html"
 }
