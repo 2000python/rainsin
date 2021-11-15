@@ -42,7 +42,7 @@
     width: 100%; 
     height: 30px; 
     position: relative; 
-    background-color: #ddd; 
+    background-color: rgb(8, 197, 255); 
     border-radius: 10px; 
     overflow: hidden; 
 } 

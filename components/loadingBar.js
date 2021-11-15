@@ -10,7 +10,7 @@ export default function LoadingBar() {
         <>
                <div id="load-progress"> 
                     <div id="load-progress-bar"></div> 
-                </div>  
+            </div>
         </>
     )
 }

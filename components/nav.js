@@ -42,7 +42,6 @@ class Nav extends React.Component{
         renderAValue :'a-linehight2',
         renderAfontsize :'a-font-middle-size2',
     }
-    
     // 整体高度
     componentDidMount() {
         window.addEventListener('scroll', antiShake(() => {
@@ -104,7 +103,9 @@ class Nav extends React.Component{
         });
         video[0].pause()
     }
-    
+    componentWillUnmount() {
+        window.removeEventListener('scroll');
+    } 
     render() {
         
         return (

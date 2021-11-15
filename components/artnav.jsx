@@ -4,9 +4,8 @@
  */
 import React, { useContext,useState} from "react";
 import Link from 'next/link';
-import Image from 'next/image';
 
-export default function ArtNav(){
+export default function ArtNav(props){
     const [boxClass, setBoxClass] = useState({
         UpLineBefore: '',
         DownLineBefore: ''
@@ -43,8 +42,10 @@ export default function ArtNav(){
                         </div>
                     </div>
                     <ul className='blog-index-nav-right-unwind-box'>
-                        <li></li>
-                    </ul>
+                    <li>
+                        
+                        </li>
+                </ul>
                 </div>
         </div>
     )

@@ -6,15 +6,19 @@
 import React from 'react';
 
 class Mouse extends React.Component{
-  // props接受X，Y改变位置状态，classNameMove改变类名以改变样式。
-  state = {
-    // 鼠标图片是否经过a标签
-    isMoveAtag: false,
-    // 鼠标位置状态
-    X: 0,
-    Y: 0,
-    // 鼠标组件的类名
-    classNameMove: '',
+  constructor(props) {
+    super(props);
+    this.state = {
+      // props接受X，Y改变位置状态，classNameMove改变类名以改变样式。
+      // 鼠标图片是否经过a标签
+      isMoveAtag: false,
+      // 鼠标位置状态
+      X: 0,
+      Y: 0,
+      // 鼠标组件的类名
+      classNameMove: '',
+    }
+
   }
   componentDidMount() {
     document.body.addEventListener(

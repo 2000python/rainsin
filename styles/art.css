@@ -66,8 +66,8 @@
     margin-top: 2rem;
     margin-left: 2rem;
     transform: translate(-50%,-50%);
-    width: 1.7rem;
-    height: .6rem;
+    width: 1.2rem;
+    height: .5rem;
     background-color: #fff;
     overflow: hidden;
 }
@@ -117,12 +117,14 @@
     animation-name: TopspanWindMove;
     animation-direction: alternate;
     animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.98, 0.02, 0.06, 0.99);
 }
 .top-wind-out{
     animation-duration: 1s;
     animation-name: TopspanWindOut;
     animation-direction: alternate;
     animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.98, 0.02, 0.06, 0.99);
 }
 .down-wind-move{
     animation-duration: 1s;
