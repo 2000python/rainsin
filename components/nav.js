@@ -102,9 +102,6 @@ class Nav extends React.Component{
             isWebsiteShow: '0',
         });
         video[0].pause()
-    }
-    componentWillUnmount() {
-        window.removeEventListener('scroll');
     } 
     render() {
         

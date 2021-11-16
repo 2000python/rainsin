@@ -57,9 +57,16 @@
     transform: translate(0,-50%);
     border-radius: 2.5rem;
     box-shadow: 3px 3px 5px #e3e5ea,-3px -3px 5px #fff;
+    transition: all .5s;
 }
 .b-i-n-unwind{
     width: 10rem;
+}
+.blog-index-nav-right-unwind{
+    width: 10rem;
+}
+.ishide{
+    display: none;
 }
 .blog-index-nav-right-wind-box{
     position: relative;

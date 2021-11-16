@@ -13,19 +13,30 @@ const ThemeContext = React.createContext('light');
 export default function blogIndex() {
     const [theme, useTheme] = useState('light');
     const [top, useTop] = useState();
-    
+    const [isWind,useIswind] = useState(false)
+    useEffect(() => {
+        window.onscroll = () => {
+            const x = document.documentElement.scrollTop;
+            useTop(x)
+        }
+        if (top < 100) {
+            useIswind(false)
+        } else {
+            useIswind(true)
+        }
+    })
     return (
-            <ThemeContext.Provider>
+            <ThemeContext.Provider value={theme}>
             <>
                 <Head>
                     <title>Riansin</title>
                 </Head>
                 <ScrollBar />
                 <div className='blog-index-box'>
-                    <ArtNav />
+                    <ArtNav iswind={isWind} />
                     <div className='blog-index-body'>
                         <div className='blog-index-body-left'>
-                            
+                            {top}
                         </div>
                         <div className='blog-index-body-right'>
 
