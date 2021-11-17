@@ -65,6 +65,9 @@ class Nav extends React.Component{
         }, 5));
         
     }
+    componentWillUnmount() {
+        window.removeEventListener('scroll')
+    }
     
     
     // 导航栏右边图标的旋转角度、抽屉可见性

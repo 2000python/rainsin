@@ -63,7 +63,10 @@
     width: 10rem;
 }
 .blog-index-nav-right-unwind{
-    width: 10rem;
+    width: 18rem;
+}
+.blog-index-nav-right-wind{
+    width: 4rem;
 }
 .ishide{
     display: none;
@@ -77,6 +80,14 @@
     height: .5rem;
     background-color: #fff;
     overflow: hidden;
+}
+.blog-index-nav-r-wind-section-box{
+    position: absolute;
+    right: 0;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 2.5rem;
+    box-shadow: 0,-3px -3px 5px #fff;
 }
 .blog-index-nav-right-wind-up-line{
     position: absolute;

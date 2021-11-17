@@ -43,12 +43,14 @@ class Mouse extends React.Component{
     const arr = Array.from(document.getElementsByTagName("a")), anticon = Array.from(document.getElementsByClassName('anticon')), cursorSection = Array.from(document.getElementsByClassName('cursor-section')),backTop = Array.from(document.getElementsByClassName('ant-back-top'));
     const cursorSectionArray = [...arr, anticon[0], ...cursorSection,...backTop];
     cursorSectionArray.forEach((e) => {
-      e.addEventListener('mousemove', () => {
-        this.setState({ isMoveAtag: true })
-      }), false;
-      e.addEventListener('mouseleave', () => {
-        this.setState({ isMoveAtag: false })
-      }), false;
+      if (e !== undefined) {
+        e.addEventListener('mousemove', () => {
+          this.setState({ isMoveAtag: true })
+        }, false);
+        e.addEventListener('mouseleave', () => {
+          this.setState({ isMoveAtag: false })
+        }, false);
+      }
     })
   }
   render() {

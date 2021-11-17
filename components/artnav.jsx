@@ -44,27 +44,32 @@ class RightIcon extends React.Component {
         isUnWindHide: ''
     }
     componentDidMount() {
-        if (this.props.iswind) {
-            this.setState({
-                isWindHide: '',
-                isUnWindHide: 'ishide' 
-            })
-        } else {
-            this.setState({
-                isWindHide: 'ishide',
-                isUnWindHide: '' 
-            })
-        }
+            window.onscroll = () => {
+                const x = document.documentElement.scrollTop;
+                if (x > 100) {
+                    this.setState({
+                        isWindHide: '',
+                        isUnWindHide: 'ishide',
+                        BoxWind: 'blog-index-nav-right-wind'
+                    })
+                } else {
+                    this.setState({
+                        isWindHide: 'ishide',
+                        isUnWindHide: '',
+                        BoxWind: 'blog-index-nav-right-unwind'
+                    })
+                }
+            }
     }
-    
-    
-    changeWind = () => {
+    changeWind = (e) => {
+        e.preventDefault();
         this.setState({
             UpLineBefore: 'top-wind-move',
             DownLineBefore: 'down-wind-move'
         })
     };
-    changeSpan = () => {
+    changeSpan = (e) => {
+        e.preventDefault();
         this.setState({
             UpLineBefore: 'top-wind-out',
             DownLineBefore: 'down-wind-out'
@@ -73,12 +78,14 @@ class RightIcon extends React.Component {
     render() {
         return (
             <>
-                <div className={'blog-index-nav-right-base ' + this.state.BoxWind} onClick={this.changeWind} onMouseOver={this.changeWind} onMouseOut={this.changeSpan}>
-                    <div className={'blog-index-nav-right-wind-box '+this.state.isWindHide}>
-                        <span className={'blog-index-nav-right-wind-up-line ' + this.state.UpLineBefore}></span>
-                        <span className={'blog-index-nav-right-wind-down-line ' + this.state.DownLineBefore}></span>
+                <div className={'blog-index-nav-right-base ' + this.state.BoxWind} >
+                    <div className={'blog-index-nav-r-wind-section-box cursor-section '+this.state.isWindHide} onClick={this.changeWind} onMouseOver={this.changeWind} onMouseOut={this.changeSpan}>
+                        <div className='blog-index-nav-right-wind-box ' >
+                            <span className={'blog-index-nav-right-wind-up-line ' + this.state.UpLineBefore}></span>
+                            <span className={'blog-index-nav-right-wind-down-line ' + this.state.DownLineBefore}></span>
+                        </div>
                     </div>
-                    <div className={'blog-index-nav-right-wind-box '+this.state.isUnWindHide}>
+                    <div className={'blog-index-nav-right-unwind-box '+this.state.isUnWindHide}>
                     </div>
                 </div>
             </>    
