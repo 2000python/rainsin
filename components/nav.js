@@ -66,7 +66,25 @@ class Nav extends React.Component{
         
     }
     componentWillUnmount() {
-        window.removeEventListener('scroll')
+        window.removeEventListener('scroll',antiShake(() => {
+            this.setState({
+                top: document.documentElement.scrollTop,
+            })
+            if (this.state.top < 70) {
+                this.setState({
+                    renderNavValue :'nav-top',
+                    renderAValue :'a-linehight2',
+                    renderAfontsize :'a-font-middle-size2',
+                })
+                
+        } else {
+                this.setState({
+                    renderNavValue : 'nav-box',
+                    renderAValue : 'a-linehight1',
+                    renderAfontsize : 'a-font-middle-size1',
+                })   
+        }      
+        }, 5))
     }
     
     

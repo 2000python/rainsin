@@ -43,23 +43,40 @@ class RightIcon extends React.Component {
         isWindHide: 'ishide',
         isUnWindHide: ''
     }
+    data = [
+        {
+            item: "Technology"
+        },
+        {
+            item: "Live"
+        },
+        {
+            item:"Resource"
+        },
+        {
+            item:"Skill"
+        },
+        {
+            item:"MyResume"
+        }
+    ]
     componentDidMount() {
-            window.onscroll = () => {
-                const x = document.documentElement.scrollTop;
-                if (x > 100) {
-                    this.setState({
-                        isWindHide: '',
-                        isUnWindHide: 'ishide',
-                        BoxWind: 'blog-index-nav-right-wind'
-                    })
-                } else {
-                    this.setState({
-                        isWindHide: 'ishide',
-                        isUnWindHide: '',
-                        BoxWind: 'blog-index-nav-right-unwind'
-                    })
-                }
+        window.onscroll = () => {
+            const x = document.documentElement.scrollTop;
+            if (x > 150) {
+                this.setState({
+                    isWindHide: '',
+                    isUnWindHide: 'ishide',
+                    BoxWind: 'blog-index-nav-right-wind'
+                })
+            } else {
+                this.setState({
+                    isWindHide: 'ishide',
+                    isUnWindHide: '',
+                    BoxWind: 'blog-index-nav-right-unwind'
+                })
             }
+        }
     }
     changeWind = (e) => {
         e.preventDefault();
@@ -85,7 +102,17 @@ class RightIcon extends React.Component {
                             <span className={'blog-index-nav-right-wind-down-line ' + this.state.DownLineBefore}></span>
                         </div>
                     </div>
-                    <div className={'blog-index-nav-right-unwind-box '+this.state.isUnWindHide}>
+                    <div className={'blog-index-nav-right-unwind-box ' + this.state.isUnWindHide}>
+                        <ul className='b-i-n-r-unwind-item-box'>
+                                {this.data.map((itemdata, index) => (
+                                    <li key={index}>
+                                        <Link href='#'>
+                                        <a key={index}>{itemdata.item}</a>
+                                        </Link>
+                                    </li>
+                                )    
+                                )}
+                        </ul>
                     </div>
                 </div>
             </>    
