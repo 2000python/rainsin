@@ -34,24 +34,70 @@ export default function blogIndex() {
             key: 4,
             content:'前端零散知识点'
         },
+        {
+            key: 5,
+            content:'HTTP1.0/1.1'
+        }
+    ]
+    const lastData = [
+        {
+            key: 1,
+            content: '假装有我的文章',
+            time: '2021.11.20',
+            bigtag: 'Technology',
+        },
+        {
+            key: 2,
+            content: '假装有我的文章2',
+            time: '2021.11.20',
+            bigtag:'Live'
+        },
+        {
+            key: 3,
+            content: '假装有我的文章3',
+            time: '2021.11.20',
+            bigtag:'Skill'
+        },
+        {
+            key: 4,
+            content: '假装有我的文章4',
+            time: '2021.11.20',
+            bigtag:'Technology'
+        },
     ]
     const changeBg = (e) => {
-        useBoxclass({
-            coverBgClass:'cover-background-section'
-        })
-        e.target.lastChild.className = `cover-background-hide ${boxClass.coverBgClass}`
+        if (e.target.firstChild.nodeType === 1) {
+            useBoxclass({
+                coverBgClass:'cover-background-section'
+            })
+            e.target.firstChild.className = `cover-background-hide ${boxClass.coverBgClass}`
+        } else {
+            useBoxclass({
+                coverBgClass:'cover-background-section'
+            })
+            e.target.previousSibling.className = `cover-background-hide ${boxClass.coverBgClass}`
+
+        }
     }
     const recoverBg = (e) => {
-        useBoxclass({
-            coverBgClass:''
-        })
-        e.target.lastChild.className = `cover-background-hide`
+        
+        if (e.target.firstChild.nodeType === 1) {
+            useBoxclass({
+                coverBgClass:''
+            })
+            e.target.firstChild.className = `cover-background-hide`
+        } else {
+            useBoxclass({
+                coverBgClass:''
+            })
+            e.target.previousSibling.className = `cover-background-hide`
+        }
     }
     return (
             <ThemeContext.Provider value={theme}>
             <>
                 <Head>
-                    <title>Apple trees-Riansin</title>
+                    <title>Apple trees｜{ 'Laest'} (Rainsin)</title>
                 </Head>
                 
                 <ScrollBar />
@@ -63,7 +109,7 @@ export default function blogIndex() {
                             <Affix offsetTop={200}>
                                 <div className='affix-left-box'>
                                     <div className='affix-left-box-item'>
-                                        <span>LAEST</span>
+                                        <span>Laest</span>
                                         <br />
                                         <span>随便写写</span>
                                     </div>
@@ -74,10 +120,11 @@ export default function blogIndex() {
                                                 <li key={data.key} className='affix-left-box-catalog-li' >
                                                     <Link href='#'>
                                                         <a className='affix-left-box-catalog-a' onMouseMove={changeBg} onMouseLeave={recoverBg}>    
-                                                            {data.content}
-                                                            <div className={'cover-background-hide '}>
-
+                                                            <div className='cover-background-hide '>
+                                                                
                                                             </div>
+                                                            <span>{data.content}</span>
+                                                            
                                                         </a>
                                                     </Link>
                                                     
@@ -91,7 +138,24 @@ export default function blogIndex() {
                         </div>
                         
                         <div className='blog-index-body-right'>
-
+                            <div className='blog-index-body-right-box'>
+                                <div className='word-daily'>
+                                    <span>
+                                        假装有个数据接口。
+                                    </span>
+                                </div>
+                                <ul className='blog-index-body-right-indexlist'>
+                                    {lastData.map((data,index) => (
+                                        <li key={data.key} className='blog-index-body-right-indexlist-box'>
+                                            <Link href='#'>
+                                                <a className='blog-index-body-right-indexlist-item'>
+                                                    <div className=''></div>
+                                                </a>
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                             </div>           
                         </div>
                     </div>
                     <div className='blog-index-fonter'>

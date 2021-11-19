@@ -33,7 +33,7 @@
     padding-left: 1rem;
     transform: translate(0,-50%);
     color: var(--blog-font-color);
-    font-family: 'Raleway-Light';
+    font-family: 'Garamond Premier Pro Display';
     font-size: large;
     letter-spacing: .3rem;
     line-height: 40px;
@@ -232,36 +232,49 @@
     color: var(--blog-font-color);
 }
 .affix-left-box-item>span:nth-child(3){
-    font-family: '思源宋体';
+    font-family: 'roboto';
     font-size: .8vw;
     margin-top: -10px;
     color: var(--blog-font-color);
     letter-spacing: .1em;
 
 }
-
+.affix-left-box-item{
+    margin-bottom: 2rem;
+}
 .affix-left-box-catalog-a{
     position: relative;
     z-index: 100;
     display: block;
-    width: 45%;
+    width: 180px;
     height: 2rem;
     line-height: 2rem;
     border-radius: calc(2rem / 2);
     box-shadow: 3px 3px 5px #e3e5ea,-3px -3px 5px #fff;
     margin: 1rem 0;
     text-align: center;
-    font-family: 'Raleway-Medium','思源宋体';
+    font-family: 'roboto','思源宋体';
     color: var(--blog-font-color);
     overflow: hidden;
+    transition: color 1s;
+    font-weight: bold;
 }
 .affix-left-box-catalog-a:hover{
     color: #fff;
 }
+.affix-left-box-catalog-a>span{
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 122;
+    white-space:nowrap;                    
+}
 .cover-background-hide{
     position: absolute;
     pointer-events: none;
-    z-index: 1;
+    z-index: 0;
     left: 10%;
     top: 50%;
     transform: translate(0,-50%);
@@ -272,22 +285,45 @@
     transition: all .6s ease-in-out;
 }
 .cover-background-section{
-    transform: scale(200);
+    transform: scale(100);
 }
 
 .blog-index-body-right{
     flex: 1;
 }
+.blog-index-body-right-box{
+    width: 90%;
+    height: 40rem;
+}
+.word-daily{
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid #dcdcdc;
+}
+.word-daily>span{
+    line-height: 80px;
+    font-family: '思源宋体';
+    font-size: 30px;
+    letter-spacing: .1rem;
+}
+
+
 .blog-index-fonter{
     width: 100vw;
     height: 25rem;
     background-color: #f2f2f2;
 }
 
-.mianshi{
+
+
+
+
+
+
+/* .mianshi{
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
     font-size: 3rem;
-}
+} */

@@ -105,17 +105,30 @@ body::-webkit-scrollbar{
 @font-face {
   font-family: 'Raleway-Light';
   src: url(https://rainsin-1305486451.file.myqcloud.com/font/Raleway-Light.ttf)format("truetype");
+  font-weight: normal;
 }
 @font-face{
-  font-family: 'Raleway-Medium';
-  src: url(https://rainsin-1305486451.file.myqcloud.com/font/Raleway/Raleway-Medium.ttf);
+  font-family: 'Raleway-Light';
+  src: url(https://rainsin-1305486451.file.myqcloud.com/font/Raleway/Raleway-Bold.ttf);
+  font-weight:bold;
 }
 
 @font-face {
   font-family: '思源宋体';
-  src: url(../public/fonts/Noto_Serif_SC/NotoSerifSC-Regular.otf);
+  src: url(https://rainsin-1305486451.file.myqcloud.com/font/Noto_Serif_SC/NotoSerifSC-Regular.otf);
+  font-weight: normal;
 }
+@font-face {
+  font-family: '思源宋体';
+  src: url(https://rainsin-1305486451.file.myqcloud.com/font/Noto_Serif_SC/NotoSerifSC-Bold.otf);
+  font-weight: bold;
+}
+
 @font-face{
   font-family: 'Garamond Premier Pro Display';
   src:url(../public/fonts/Garamond\ Premier\ Pro\ Display.otf)
+}
+@font-face {
+  font-family: 'roboto';
+  src: url(https://rainsin-1305486451.file.myqcloud.com/font/Roboto/Roboto-Regular.ttf);
 }
