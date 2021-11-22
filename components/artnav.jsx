@@ -61,7 +61,7 @@ class RightIcon extends React.Component {
         }
     ]
     componentDidMount() {
-        window.onscroll = () => {
+        window.addEventListener('scroll', () => {
             const x = document.documentElement.scrollTop;
             if (x > 150) {
                 this.setState({
@@ -76,7 +76,23 @@ class RightIcon extends React.Component {
                     BoxWind: 'blog-index-nav-right-unwind'
                 })
             }
-        }
+        })
+        // window.onscroll = () => {
+        //     const x = document.documentElement.scrollTop;
+        //     if (x > 150) {
+        //         this.setState({
+        //             isWindHide: '',
+        //             isUnWindHide: 'ishide',
+        //             BoxWind: 'blog-index-nav-right-wind'
+        //         })
+        //     } else {
+        //         this.setState({
+        //             isWindHide: 'ishide',
+        //             isUnWindHide: '',
+        //             BoxWind: 'blog-index-nav-right-unwind'
+        //         })
+        //     }
+        // }
     }
     changeWind = (e) => {
         e.preventDefault();

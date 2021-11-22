@@ -42,29 +42,78 @@ export default function blogIndex() {
     const lastData = [
         {
             key: 1,
+            title:'我的文章',
             content: '假装有我的文章',
-            time: '2021.11.20',
-            bigtag: 'Technology',
+            lastupdatetime:'2021.11.20',
+            uploadtime: '2021.11.20',
+            tag: 'Technology',
+            kind:'css',
         },
         {
             key: 2,
+            title:'我的文章2',
             content: '假装有我的文章2',
-            time: '2021.11.20',
-            bigtag:'Live'
+            lastupdatetime:'2021.11.20',
+            uploadtime: '2021.11.20',
+            tag: 'Live',
+            kind:'吃',
         },
         {
             key: 3,
+            title:'我的文章3',
             content: '假装有我的文章3',
-            time: '2021.11.20',
-            bigtag:'Skill'
+            lastupdatetime:'2021.11.20',
+            uploadtime: '2021.11.20',
+            tag: 'Skill',
+            kind:'资源'
         },
         {
             key: 4,
+            title:'我的文章4',
             content: '假装有我的文章4',
-            time: '2021.11.20',
-            bigtag:'Technology'
+            lastupdatetime:'2021.11.20',
+            uploadtime: '2021.11.20',
+            tag: 'Technology',
+            kind:'JS/TS'
+        },
+        {
+            key: 5,
+            title:'我的文章5',
+            content: '假装有我的文章5',
+            lastupdatetime:'2021.11.20',
+            uploadtime: '2021.11.20',
+            tag: 'Technology',
+            kind:'JS/TS'
+        },
+        {
+            key: 6,
+            title:'我的文章6',
+            content: '假装有我的文章6',
+            lastupdatetime:'2021.11.20',
+            uploadtime: '2021.11.20',
+            tag: 'Technology',
+            kind:'JS/TS'
+        },
+        {
+            key: 7,
+            title:'我的文章7',
+            content: '假装有我的文章7',
+            lastupdatetime:'2021.11.20',
+            uploadtime: '2021.11.20',
+            tag: 'Technology',
+            kind:'JS/TS'
+        },
+        {
+            key: 8,
+            title:'我的文章8',
+            content: '假装有我的文章8',
+            lastupdatetime:'2021.11.20',
+            uploadtime: '2021.11.20',
+            tag: 'Technology',
+            kind:'JS/TS'
         },
     ]
+    let scrollTop = 0,footerHight=0,Affix_Buttom=0;
     const changeBg = (e) => {
         if (e.target.firstChild.nodeType === 1) {
             useBoxclass({
@@ -145,15 +194,17 @@ export default function blogIndex() {
                                     </span>
                                 </div>
                                 <ul className='blog-index-body-right-indexlist'>
-                                    {lastData.map((data,index) => (
-                                        <li key={data.key} className='blog-index-body-right-indexlist-box'>
-                                            <Link href='#'>
-                                                <a className='blog-index-body-right-indexlist-item'>
-                                                    <div className=''></div>
-                                                </a>
-                                            </Link>
-                                        </li>
-                                    ))}
+                                    {lastData.map((data, index) => {
+                                        return (                                           
+                                            <li key={data.key} className='blog-index-body-right-indexlist-box'>
+                                                <Link href='#'>
+                                                    <a className='blog-index-body-right-indexlist-item'>
+                                                        <div className=''></div>
+                                                    </a>
+                                                </Link>
+                                            </li>                                  
+                                        )}
+                                    )}
                                 </ul>
                              </div>           
                         </div>

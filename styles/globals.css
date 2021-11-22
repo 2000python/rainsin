@@ -40,7 +40,7 @@ body::-webkit-scrollbar{
 /* 自定义滚动条 */
 .scroll-progress-bar{
   position: fixed;
-  z-index: 109;
+  z-index: 1000;
   top: 0;
   height: 3px;
   background-color: rgb(8, 197, 255);

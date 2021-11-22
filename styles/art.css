@@ -215,11 +215,10 @@
 .blog-index-body{
     display: flex;
     width: 100vw;
-    height: 100vmax;
     margin-top: 7vh;
 }
 .blog-index-body-left{
-    flex: .5;
+    flex: .4;
 }
 .affix-left-box{
     width: 80%;
@@ -237,6 +236,8 @@
     margin-top: -10px;
     color: var(--blog-font-color);
     letter-spacing: .1em;
+    font-family: '思源宋体';
+    color: rgb(130,130,130); 
 
 }
 .affix-left-box-item{
@@ -258,6 +259,7 @@
     overflow: hidden;
     transition: color 1s;
     font-weight: bold;
+    background-color: var(--art-bg-color);
 }
 .affix-left-box-catalog-a:hover{
     color: #fff;
@@ -269,7 +271,7 @@
     top: 50%;
     transform: translate(-50%,-50%);
     z-index: 122;
-    white-space:nowrap;                    
+    white-space:nowrap;                   
 }
 .cover-background-hide{
     position: absolute;
@@ -291,10 +293,6 @@
 .blog-index-body-right{
     flex: 1;
 }
-.blog-index-body-right-box{
-    width: 90%;
-    height: 40rem;
-}
 .word-daily{
     width: 100%;
     height: 80px;
@@ -306,11 +304,27 @@
     font-size: 30px;
     letter-spacing: .1rem;
 }
+.blog-index-body-right-box{
+    width: 90%;
+}
+.blog-index-body-right-indexlist-box{
+    width: 100%;
+    height: 20em;
+    margin: 3em 0 3em 0;
+    background-color: #fff;
+}
+.blog-index-body-right-indexlist-item{
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+}
 
 
 .blog-index-fonter{
+
     width: 100vw;
-    height: 25rem;
+    height: 50vh;
     background-color: #f2f2f2;
 }
 
