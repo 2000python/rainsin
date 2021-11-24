@@ -2,9 +2,9 @@
  * @Author: 尉旭胜(Riansin)
  * @LastEditors: 尉旭胜(Riansin)
  */
-import React, { useContext,useState,useEffect} from "react";
+import React from "react";
 import Link from 'next/link';
-
+import {Row,Col} from 'antd'
 export default function ArtNav(props){
     
     // const [styleChildren, setChildren] = useState(
@@ -18,19 +18,25 @@ export default function ArtNav(props){
     
     return (
         <div className='blog-index-nav'>
-                <div className='blog-index-nav-left'>
-                    <div className='blog-index-nav-left-icon'>
-                        
+            <Row>
+                <Col xs={0} sm={0} md={0} lg={12} xl={12}>
+                    <div className='blog-index-nav-left'>
+                        <div className='blog-index-nav-left-icon'>
+                            
+                        </div>
+                        <Link href='#'>
+                            <a className='blog-index-nav-left-item'>
+                                Apple Trees
+                            </a>
+                        </Link>
                     </div>
-                    <Link href='#'>
-                        <a className='blog-index-nav-left-item'>
-                            Apple Trees
-                        </a>
-                    </Link>
-                </div>
-            <div className='blog-index-nav-right'>
-                <RightIcon iswind={ props.iswind}/>
-            </div>
+                </Col>
+                <Col xs={0} sm={0} md={0} lg={0} xl={12}>
+                    <div className='blog-index-nav-right'>
+                        <RightIcon iswind={ props.iswind}/>
+                    </div>
+                </Col>
+            </Row>
         </div>
     )
 }

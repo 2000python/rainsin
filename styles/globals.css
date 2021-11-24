@@ -26,7 +26,7 @@ ul{
   --nav-height:6rem;
   --nav-vary-height:8rem;
   --art-bg-color:#f8f8f8;
-  --blog-font-color:rgb(39,39,39)
+  --blog-font-color:rgb(39,39,39);
 }
 body{
   position: relative;
@@ -48,7 +48,7 @@ body::-webkit-scrollbar{
 /* 鼠标图标 */
 .mouse-box{
   position:absolute;
-  z-index:10;
+  z-index:10000;
   background-color:#c7c7c7;
   pointer-events: none;
   transition: all .1s;
@@ -131,4 +131,10 @@ body::-webkit-scrollbar{
 @font-face {
   font-family: 'roboto';
   src: url(https://rainsin-1305486451.file.myqcloud.com/font/Roboto/Roboto-Regular.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family:'roboto' ;
+  src: url(https://rainsin-1305486451.file.myqcloud.com/font/Roboto/Roboto-Bold.ttf);
+  font-weight: bold;
 }

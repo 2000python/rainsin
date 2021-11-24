@@ -6,7 +6,7 @@
 .blog-index-nav{
     display: flex;
     width: 100vw;
-    height: 10rem;
+    height: 9rem;
 }
 .blog-index-nav-left{
     position: relative;
@@ -49,6 +49,7 @@
 }
 .blog-index-nav-right-base{
     position: fixed;
+    z-index: 100;
     width: 4rem;
     height: 4rem;
     top: 5rem;
@@ -59,6 +60,7 @@
     box-shadow: 3px 3px 5px #e3e5ea,-3px -3px 5px #fff;
     transition: all .5s ;
     overflow: hidden;
+    background-color: var(--art-bg-color);
 }
 .blog-index-nav-right-unwind{
     width: 25rem;
@@ -213,16 +215,14 @@
 
 
 .blog-index-body{
-    display: flex;
     width: 100vw;
-    margin-top: 7vh;
+    margin-top: 1vh;
 }
 .blog-index-body-left{
-    flex: .4;
+    /* flex: .4; */
 }
-.affix-left-box{
-    width: 80%;
-    margin-left: 9vw;
+.affix-left-box{ 
+    padding-left: 10vw; 
 }
 .affix-left-box-item>span:nth-child(1){
     font-family: 'Garamond Premier Pro Display';
@@ -243,7 +243,7 @@
 .affix-left-box-item{
     margin-bottom: 2rem;
 }
-.affix-left-box-catalog-a{
+.theme-box-item-a{
     position: relative;
     z-index: 100;
     display: block;
@@ -261,10 +261,11 @@
     font-weight: bold;
     background-color: var(--art-bg-color);
 }
-.affix-left-box-catalog-a:hover{
+.theme-box-item-a:hover{
     color: #fff;
 }
-.affix-left-box-catalog-a>span{
+
+.theme-box-item-a>span{
     display: inline-block;
     position: absolute;
     left: 50%;
@@ -286,12 +287,19 @@
     background-color: var(--blog-font-color);
     transition: all .6s ease-in-out;
 }
-.cover-background-section{
+
+.cover-background-section-1{
+    transform: scale(100);
+}
+.cover-background-section-2{
     transform: scale(100);
 }
 
+
+
 .blog-index-body-right{
-    flex: 1;
+    width: 100%;
+    /* flex: 1; */
 }
 .word-daily{
     width: 100%;
@@ -305,7 +313,9 @@
     letter-spacing: .1rem;
 }
 .blog-index-body-right-box{
+    position: relative;
     width: 90%;
+    margin: 0 auto;
 }
 .blog-index-body-right-indexlist-box{
     width: 100%;
@@ -320,6 +330,9 @@
     
 }
 
+.blog-index-body-right-indexlist-pagin{
+    text-align: right;
+}
 
 .blog-index-fonter{
 
