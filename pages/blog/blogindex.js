@@ -10,8 +10,9 @@ const ThemeContext = React.createContext('light');
 
 export default function BlogIndex() {
     const [boxClass, useBoxclass] = useState({
-        coverBgClass:"",
-    })
+        coverBgClass: "",
+    });
+    const [getSection, setGetsection] = useState(1);
     const itemCatalog = [
         {
             key: 1,
@@ -164,7 +165,15 @@ export default function BlogIndex() {
                                                                     <span>{data.content}</span>
 
                                                                 </a> */}
-                                                            <ItemBox data={data.content} classBgName={1} markClass={ 'aside-item'}/>
+                                                            <ItemBox content={data.content}
+                                                                data={data.key}
+                                                                classBgName={1}
+                                                                markClass={'aside-item'}
+                                                                getSectionValue={(num) => {
+                                                                        setGetsection(num);
+                                                                }}
+                                                                SectionValue={getSection}
+                                                                />
 
                                                         </li>
                                                     )
@@ -214,65 +223,81 @@ export default function BlogIndex() {
             </ThemeContext.Provider>
         )
 }
-// outerwidht：外层盒子宽度  outerheight:外层盒子高度  coverleft:遮罩位置 coverwidht/height：遮罩原始宽高 dispaly：组件布局行为 margin：组件外边距
+// data:标识每个ITEM的序号，可以用它做许多事情  content:ITEM的内容  markClass：标记类名 outerwidht：外层盒子宽度  outerheight:外层盒子高度  coverleft:遮罩位置 coverwidht/height：遮罩原始宽高 dispaly：组件布局行为 margin：组件外边距 
 function ItemBox(props) {
     const [boxClass, useBoxclass] = useState({
         coverBgClass: "",
     }), [isSection, useIsSection] = useState(false);
-    const [sectioNode, useSectioNode] = useState(1);
+    const [sectionV, setSectionV] = useState(props.data),[sectionState,usesectionState]=useState('notchosen');
+    const firstCover = `cover-background-section-${props.classBgName}`;
+
     const ChangeBg = (e) => {
         useBoxclass({
             coverBgClass:`cover-background-section-${props.classBgName}`
         })
-        if (!isSection) {
+        const obj = document.getElementsByClassName(props.markClass);
+        if (obj[sectionV - 1].dataset.state === 'notchosen') {
             if (e.target.firstChild.nodeType === 1) {
                 e.target.firstChild.className = `cover-background-hide ${boxClass.coverBgClass}`
-            } else { 
+                
+            } else {
                 e.target.previousSibling.className = `cover-background-hide ${boxClass.coverBgClass}`
-            } 
-        } 
+            }
+            obj[sectionV - 1].style.color = 'white'
+        }
+        
     }
+    
     const RecoverBg = (e) => {
         useBoxclass({
-            coverBgClass:''
+            coverBgClass: ''
         })
-        if (!isSection) {
+        const obj = document.getElementsByClassName(props.markClass);
+        console.log(obj[sectionV - 1].dataset.state);
+        if (obj[sectionV - 1].dataset.state === 'notchosen'){
             if (e.target.firstChild.nodeType === 1) {
                 e.target.firstChild.className = `cover-background-hide`
             } else {
                 e.target.previousSibling.className = `cover-background-hide`
-            }  
-        } 
+            }
+            obj[sectionV - 1].style.color = 'rgb(39,39,39)'
     }
+    }
+    useEffect(() => {
+        const obj = document.getElementsByClassName(props.markClass);
+        obj[0].style.color = 'white';
+        obj[0].firstChild.className = 'cover-background-hide cover-background-section-1';
+        obj[0].dataset.state = 'state'
+    },[])
     const sectionDiv = (e) => {
         useBoxclass({
             coverBgClass:`cover-background-section-${props.classBgName}`
         })
-        console.log(e.target);
-        if (e.target.firstChild.nodeType == 1) {
-            useSectioNode(parseInt(e.target.attributes[1].nodeValue));
-        } else {
-            useSectioNode(parseInt(e.target.textContent)) 
-        }
-        console.log(sectioNode);
+        props.getSectionValue(parseInt(e.target.attributes[0].nodeValue));
+        
         const obj = document.getElementsByClassName(props.markClass);
-
+        obj[sectionV - 1].style.color = 'white';
+        obj[sectionV - 1].dataset.state = 'state';
+        // SectionValue记录上次选择的元素
+        obj[props.SectionValue - 1].style.color = 'rgb(39,39,39)';
+        obj[props.SectionValue - 1].firstChild.className = `cover-background-hide`;
+        obj[props.SectionValue - 1].dataset.state = 'notchosen';
+        
         if (e.target.firstChild.nodeType == 1) {
             e.target.firstChild.className = `cover-background-hide ${boxClass.coverBgClass}`
         } else { 
             e.target.previousSibling.className = `cover-background-hide ${boxClass.coverBgClass}`
         }
-        useIsSection(true)
     }
     
     return(
         <>
             <Link href='#'>
-                <a className={`theme-box-item-a ${props.markClass}`} title={props.data} onMouseMove={ChangeBg} onMouseLeave={RecoverBg} onClick={sectionDiv} style={{ width: `${props.outerwidth}px`,display:`${props.display}`,margin:`${props.margin}`}} >
+                <a data-id={props.data} data-state={'notchosen'} className={`theme-box-item-a ${props.markClass}`} title={props.content} onMouseMove={ChangeBg} onMouseLeave={RecoverBg} onClick={sectionDiv} style={{ width: `${props.outerwidth}px`,display:`${props.display}`,margin:`${props.margin}`}} >
                 <div className='cover-background-hide ' style={{ left: `${props.coverleft}%`, width: `${props.coverwidth}px`, height:`${props.coverheight}px`,borderRadius:`${props.coverwidth / 2}`}}>
 
                 </div>
-                <span>{props.data}</span>
+                <span data-id={props.data}>{props.content}</span>
 
                 </a>
                 </Link>
@@ -281,10 +306,12 @@ function ItemBox(props) {
 }
 
 function Pagination(props) {
+    const [getSection, setGetsection] = useState(1);
     return (
         <ul className='blog-index-body-right-indexlist-pagin'>
             {props.total.map((data) => 
                 <ItemBox data={data.key}
+                    content={data.key}
                     outerwidth={40}
                     coverleft={50}
                     coverheight={1}
@@ -292,7 +319,12 @@ function Pagination(props) {
                     classBgName={2}
                     display={'inline-block'}
                     margin={'0 7px 0 7px'}
-                    markClass={ 'pagi-item'}/>
+                    markClass={'pagi-item'}
+                    getSectionValue={(num) => {
+                        setGetsection(num);
+                    }}
+                    SectionValue={getSection}
+                    />
             )}
             </ul>
     )
