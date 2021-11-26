@@ -4,7 +4,8 @@ import ScrollBar from "../../components/scrollBar";
 import ArtNav from '../../components/artnav';
 import Head from 'next/head';
 import Mouse from '../../components/mouse';
-import { Affix, Row , Col} from 'antd';
+import { Affix, Row, Col, Breadcrumb } from 'antd';
+import {HomeOutlined} from '@ant-design/icons'
 
 const ThemeContext = React.createContext('light');
 
@@ -131,7 +132,7 @@ export default function BlogIndex() {
         }
     }
     return (
-            <ThemeContext.Provider>
+            <ThemeContext.Provider value='drak'>
             <>
                 <Head>
                     <title>Apple trees｜{ 'Laest'} (Rainsin)</title>
@@ -188,9 +189,11 @@ export default function BlogIndex() {
                                 <div className='blog-index-body-right'>
                                     <div className='blog-index-body-right-box'>
                                         <div className='word-daily'>
-                                            <span>
-                                                假装有个数据接口。
-                                            </span>
+                                            <Breadcrumb>
+                                                <Breadcrumb.Item>
+                                                    <HomeOutlined/>
+                                                </Breadcrumb.Item>
+                                            </Breadcrumb>
                                         </div>
                                         <ul className='blog-index-body-right-indexlist'>
                                             {lastData.map((data, index) => {
@@ -227,9 +230,8 @@ export default function BlogIndex() {
 function ItemBox(props) {
     const [boxClass, useBoxclass] = useState({
         coverBgClass: "",
-    }), [isSection, useIsSection] = useState(false);
-    const [sectionV, setSectionV] = useState(props.data),[sectionState,usesectionState]=useState('notchosen');
-    const firstCover = `cover-background-section-${props.classBgName}`;
+    });
+    const sectionV = props.data;
 
     const ChangeBg = (e) => {
         useBoxclass({
@@ -253,7 +255,6 @@ function ItemBox(props) {
             coverBgClass: ''
         })
         const obj = document.getElementsByClassName(props.markClass);
-        console.log(obj[sectionV - 1].dataset.state);
         if (obj[sectionV - 1].dataset.state === 'notchosen'){
             if (e.target.firstChild.nodeType === 1) {
                 e.target.firstChild.className = `cover-background-hide`
@@ -264,30 +265,39 @@ function ItemBox(props) {
     }
     }
     useEffect(() => {
+        // 默认选择项
         const obj = document.getElementsByClassName(props.markClass);
         obj[0].style.color = 'white';
         obj[0].firstChild.className = 'cover-background-hide cover-background-section-1';
         obj[0].dataset.state = 'state'
+        // 第二个参数[]使得hook在加载后只执行一次
     },[])
     const sectionDiv = (e) => {
         useBoxclass({
             coverBgClass:`cover-background-section-${props.classBgName}`
         })
+        // 将点击元素的序号记录下来，在点击下一个元素后方便恢复样式
         props.getSectionValue(parseInt(e.target.attributes[0].nodeValue));
         
         const obj = document.getElementsByClassName(props.markClass);
-        obj[sectionV - 1].style.color = 'white';
-        obj[sectionV - 1].dataset.state = 'state';
-        // SectionValue记录上次选择的元素
-        obj[props.SectionValue - 1].style.color = 'rgb(39,39,39)';
-        obj[props.SectionValue - 1].firstChild.className = `cover-background-hide`;
-        obj[props.SectionValue - 1].dataset.state = 'notchosen';
         
-        if (e.target.firstChild.nodeType == 1) {
-            e.target.firstChild.className = `cover-background-hide ${boxClass.coverBgClass}`
-        } else { 
-            e.target.previousSibling.className = `cover-background-hide ${boxClass.coverBgClass}`
+        // SectionValue记录上次选择的元素 恢复上次点击元素的样式
+        if (sectionV !== props.SectionValue) {
+            obj[sectionV - 1].style.color = 'white';
+            obj[sectionV - 1].dataset.state = 'state';
+
+            obj[props.SectionValue - 1].style.color = 'rgb(39,39,39)';
+            obj[props.SectionValue - 1].firstChild.className = `cover-background-hide`;
+            obj[props.SectionValue - 1].dataset.state = 'notchosen';
+            
+            if (e.target.firstChild.nodeType == 1) {
+                e.target.firstChild.className = `cover-background-hide ${boxClass.coverBgClass}`
+            } else { 
+                e.target.previousSibling.className = `cover-background-hide ${boxClass.coverBgClass}`
+            }
         }
+        // 判断点击元素的类型 改变点击元素的样式
+        
     }
     
     return(
@@ -310,7 +320,8 @@ function Pagination(props) {
     return (
         <ul className='blog-index-body-right-indexlist-pagin'>
             {props.total.map((data) => 
-                <ItemBox data={data.key}
+                <ItemBox key={data.key}
+                    data={data.key}
                     content={data.key}
                     outerwidth={40}
                     coverleft={50}

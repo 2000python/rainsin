@@ -47,22 +47,30 @@ class RightIcon extends React.Component {
         DownLineBefore: '',
         BoxWind: 'blog-index-nav-right-unwind',
         isWindHide: 'ishide',
-        isUnWindHide: ''
+        isUnWindHide: '',
+        selectionClass: 'selectionBefore',
+        selectionIndex: -1,
+        overIndex:0,
     }
     data = [
         {
+            key:1,
             item: "Technology"
         },
         {
+            key:2,
             item: "Live"
         },
         {
+            key:3,
             item:"Resource"
         },
         {
+            key:4,
             item:"Skill"
         },
         {
+            key:5,
             item:"MyResume"
         }
     ]
@@ -114,6 +122,41 @@ class RightIcon extends React.Component {
             DownLineBefore: 'down-wind-out'
         });
     }
+    gotobigtag = (e) => {
+        const alltarget = document.getElementsByClassName('blog-mark-nav-item');
+        if (this.state.selectionIndex === -1) {
+            alltarget[e.target.dataset.id].className = 'blog-mark-nav-item';
+            this.setState({ selectionIndex: e.target.dataset.id})
+            alltarget[e.target.dataset.id].className = `blog-mark-nav-item ${this.state.selectionClass}`
+        } else if(this.state.selectionIndex !== e.target.dataset.id) {
+            alltarget[this.state.selectionIndex].className = `blog-mark-nav-item`;
+            alltarget[e.target.dataset.id].className = `blog-mark-nav-item ${this.state.selectionClass}`
+            this.setState({selectionIndex:e.target.dataset.id})
+        }     
+    }
+    mouseover = (e) => {
+        const alltarget = document.getElementsByClassName('blog-mark-nav-item');
+        for (let i = 0; i < alltarget.length;i++){
+            if (i != e.target.dataset.id) {
+                if (alltarget[i].className == 'blog-mark-nav-item selectionBefore') {
+                    alltarget[i].className ='blog-mark-nav-item selectionBefore blog-nav-mouseover'
+                } else {
+                    alltarget[i].className = `blog-mark-nav-item blog-nav-mouseover`; 
+                }
+            }
+        }
+    }
+    mouseout = (e) => {
+        const alltarget = document.getElementsByClassName('blog-mark-nav-item');
+        const regSelection = /selectionBefore/g
+        for (let i = 0; i < alltarget.length; i++){
+            if (regSelection.test(alltarget[i].className)) {
+                alltarget[i].className ='blog-mark-nav-item selectionBefore'
+            } else {
+                alltarget[i].className = `blog-mark-nav-item`; 
+            }
+        }
+    }
     render() {
         return (
             <>
@@ -126,10 +169,10 @@ class RightIcon extends React.Component {
                     </div>
                     <div className={'blog-index-nav-right-unwind-box ' + this.state.isUnWindHide}>
                         <ul className='b-i-n-r-unwind-item-box'>
-                                {this.data.map((itemdata, index) => (
-                                    <li key={index}>
+                                {this.data.map((itemdata) => (
+                                    <li key={itemdata.key}>
                                         <Link href='#'>
-                                        <a key={index}>{itemdata.item}</a>
+                                        <a key={itemdata.key} data-id={itemdata.key-1} className='blog-mark-nav-item' onClick={this.gotobigtag} onMouseOver={this.mouseover} onMouseOut={this.mouseout}>{itemdata.item}</a>
                                         </Link>
                                     </li>
                                 )    
