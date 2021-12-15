@@ -133,7 +133,7 @@ class Nav extends React.Component{
                     <div className='inner'>
                         <div className='left-nav-box'>
                             <ul>
-                            <li className="cursor-section"><Link href='/blog/blogindex' ><a className={this.state.renderAValue} >Article</a></Link></li>
+                            <li className="cursor-section"><Link href='/blog/bindex' ><a className={this.state.renderAValue} >Article</a></Link></li>
                             <li className="cursor-section"><Link href='/'><a  className={this.state.renderAValue}>Pages</a></Link></li>
                                 <li className="cursor-section" onClick={this.websiteOpen}  style={{cursor:'pointer'}}><Link href='/'><a className={this.state.renderAValue} >Website</a></Link></li>
                             </ul>                           

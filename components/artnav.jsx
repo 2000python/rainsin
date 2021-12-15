@@ -6,7 +6,6 @@ import React from "react";
 import Link from 'next/link';
 import {Row,Col} from 'antd'
 export default function ArtNav(props){
-    
     // const [styleChildren, setChildren] = useState(
     //             <>
     //                 <span className={'blog-index-nav-right-wind-up-line '+ boxClass.UpLineBefore}></span>
@@ -171,9 +170,9 @@ class RightIcon extends React.Component {
                         <ul className='b-i-n-r-unwind-item-box'>
                                 {this.data.map((itemdata) => (
                                     <li key={itemdata.key}>
-                                        <Link href='#'>
-                                        <a key={itemdata.key} data-id={itemdata.key-1} className='blog-mark-nav-item' onClick={this.gotobigtag} onMouseOver={this.mouseover} onMouseOut={this.mouseout}>{itemdata.item}</a>
-                                        </Link>
+                                        
+                                        <a  key={itemdata.key} data-id={itemdata.key-1} className='blog-mark-nav-item' onClick={this.gotobigtag} onMouseOver={this.mouseover} onMouseOut={this.mouseout}>{itemdata.item}</a>
+    
                                     </li>
                                 )    
                                 )}

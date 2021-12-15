@@ -135,7 +135,7 @@ class LatestInfo extends React.Component{
           <ul className='li-content'>
               <li className='big-li-cot-box'>
                 <div className='li-cot-item-box'>
-                  <Link href='/blog/blogindex'>
+                  <Link href='/blog/bindex'>
                   <a style={{backgroundImage:'url(https://rainsin-1305486451.file.myqcloud.com/img/webp/%E6%9E%97%E4%B8%B9.webp)'}}>
                      
                     </a>
@@ -146,7 +146,7 @@ class LatestInfo extends React.Component{
                   
                 </div>
                 <div className='li-cot-blog-link'></div>
-                <Link href='/blog/blogindex'>
+                <Link href='/blog/bindex'>
                   <a className={this.state.classNameWindBox} onMouseOver={this.changeWind} onMouseOut={this.restoreWind}>
                       <div className={this.state.beforeClassName} style={{backgroundImage:this.state.iseye}}></div>
                   </a>
@@ -159,7 +159,7 @@ class LatestInfo extends React.Component{
                      
                   </a>
                   </Link>
-                  <span className='li-cot-time'>2021.9.17</span>
+                  <span className='li-cot-time'>2021.10.17</span>
                   <span className='li-cot-item'>服务端渲染框架</span>
                   <span className='li-cot-tag'>technology</span>
                   
@@ -170,7 +170,7 @@ class LatestInfo extends React.Component{
                      
                   </a>
                   </Link>
-                  <span className='li-cot-time'>2021.9.17</span>
+                  <span className='li-cot-time'>2021.10.17</span>
                   <span className='li-cot-item'>服务端渲染框架</span>
                   <span className='li-cot-tag'>technology</span>
                   
@@ -183,7 +183,7 @@ class LatestInfo extends React.Component{
                      
                   </a>
                   </Link>
-                  <span className='li-cot-time'>2021.9.17</span>
+                  <span className='li-cot-time'>2021.10.17</span>
                   <span className='li-cot-item'>服务端渲染框架</span>
                   <span className='li-cot-tag'>technology</span>
                   
@@ -194,7 +194,7 @@ class LatestInfo extends React.Component{
                      
                   </a>
                   </Link>
-                  <span className='li-cot-time'>2021.9.17</span>
+                  <span className='li-cot-time'>2021.10.17</span>
                   <span className='li-cot-item'>服务端渲染框架</span>
                   <span className='li-cot-tag'>technology</span>
                   

@@ -347,6 +347,11 @@
 .blog-index-body-right-indexlist-pagin{
     text-align: right;
 }
+.blog-index-body-right-indexlist-item-center{
+    text-align: left;
+    margin: auto auto;
+}
+
 
 .blog-index-fonter{
 
