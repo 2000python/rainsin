@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link';
-import { Router, Route } from 'react-router'
 import ScrollBar from "../../components/scrollBar";
 import ArtNav from '../../components/artnav';
 import Head from 'next/head';
 import Mouse from '../../components/mouse';
 import { Affix, Row, Col, Breadcrumb } from 'antd';
-import { HomeOutlined } from '@ant-design/icons'
 import axios from 'axios';
 
 
@@ -338,7 +336,7 @@ function ItemBox(props) {
         obj[0].dataset.state = 'state'
         // 第二个参数[]使得hook在加载后只执行一次
     },[])
-    const sectionDiv = (e) => {
+    const SectionDiv = (e) => {
         useBoxclass({
             coverBgClass:`cover-background-section-${props.classBgName}`
         })
@@ -373,7 +371,7 @@ function ItemBox(props) {
     return(
         <>
             <Link href='#'>
-                <a data-id={props.data} data-state={'notchosen'} className={`theme-box-item-a ${props.markClass}`} title={props.content} onMouseMove={ChangeBg} onMouseLeave={RecoverBg} onClick={sectionDiv} style={{ width: `${props.outerwidth}px`,display:`${props.display}`,margin:`${props.margin}`}} >
+                <a data-id={props.data} data-state={'notchosen'} className={`theme-box-item-a ${props.markClass}`} title={props.content} onMouseMove={ChangeBg} onMouseLeave={RecoverBg} onClick={SectionDiv} style={{ width: `${props.outerwidth}px`,display:`${props.display}`,margin:`${props.margin}`}} >
                 <div className='cover-background-hide ' style={{ left: `${props.coverleft}%`, width: `${props.coverwidth}px`, height:`${props.coverheight}px`,borderRadius:`${props.coverwidth / 2}`}}>
 
                 </div>
