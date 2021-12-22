@@ -141,7 +141,7 @@ class LatestInfo extends React.Component{
                     </a>
                     </Link>
                   <span className='li-cot-time'>2021.10.30</span>
-                  <span className='li-cot-item'>羽毛球技术要点（个人观点）</span>
+                  <span className='li-cot-item'>文章先在github存储，这个项目等找到工作了再整</span>
                   <span className='li-cot-tag'>technology</span>
                   
                 </div>
@@ -160,7 +160,7 @@ class LatestInfo extends React.Component{
                   </a>
                   </Link>
                   <span className='li-cot-time'>2021.10.17</span>
-                  <span className='li-cot-item'>服务端渲染框架</span>
+                  <span className='li-cot-item'>文章先在github存储，这个项目等找到工作了再整</span>
                   <span className='li-cot-tag'>technology</span>
                   
                 </div>
@@ -171,7 +171,7 @@ class LatestInfo extends React.Component{
                   </a>
                   </Link>
                   <span className='li-cot-time'>2021.10.17</span>
-                  <span className='li-cot-item'>服务端渲染框架</span>
+                  <span className='li-cot-item'>文章先在github存储，这个项目等找到工作了再整</span>
                   <span className='li-cot-tag'>technology</span>
                   
                 </div>
@@ -184,7 +184,7 @@ class LatestInfo extends React.Component{
                   </a>
                   </Link>
                   <span className='li-cot-time'>2021.10.17</span>
-                  <span className='li-cot-item'>服务端渲染框架</span>
+                  <span className='li-cot-item'>文章先在github存储，这个项目等找到工作了再整</span>
                   <span className='li-cot-tag'>technology</span>
                   
                 </div>
@@ -195,7 +195,7 @@ class LatestInfo extends React.Component{
                   </a>
                   </Link>
                   <span className='li-cot-time'>2021.10.17</span>
-                  <span className='li-cot-item'>服务端渲染框架</span>
+                  <span className='li-cot-item'>文章先在github存储，这个项目等找到工作了再整</span>
                   <span className='li-cot-tag'>technology</span>
                   
                 </div>
