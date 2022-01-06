@@ -1,8 +1,12 @@
 {
-  "../node_modules/next/dist/client/next-dev.js -> ./dev/noop": {
-    "id": "./node_modules/next/dist/client/dev/noop.js",
+  "blog/bindex.js -> ./blogindex": {
+    "id": 3654,
     "files": [
-      "static/chunks/node_modules_next_dist_client_dev_noop_js.js"
+      "static/chunks/197-23223b00d562c70eb534.js",
+      "static/chunks/676-908774bca3aa02dc88ad.js",
+      "static/chunks/933-fb845185f47d3295c341.js",
+      "static/chunks/513-b30899b966944fdfb0bc.js",
+      "static/chunks/654.d8ddbe85759ffc7cf3e2.js"
     ]
   }
 }
